@@ -21,7 +21,7 @@ In this project, I build a mini honeynet in Azure and ingest log sources from va
 
 ## Architecture After Hardening / Security Controls
 
-<p align:"center">
+<p align="center">
   <img src="https://github.com/Flash028/Flash028/blob/94de8b2b17c525ea25ab830c6bd33452b9aeec4d/BUILDING%20A%20SOC/SUBNET.png" alt="Architecture Diagram">
 </p>
 
