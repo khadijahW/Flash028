@@ -4,7 +4,7 @@ I'm [Your Name], a passionate [Your Profession/Interest] from [Your Location]. W
 
 ## About Me
 
-I am a [Brief Description about Yourself]. My interests include [Your Interests/Hobbies] and I am always eager to learn and explore new technologies.
+I am a [Brief Description about Yourself]. My interests include [Your Interests/Hobbies], and I am always eager to learn and explore new technologies.
 
 Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/your-linkedin-profile) or [Twitter](https://twitter.com/your-twitter-handle).
 
@@ -16,11 +16,11 @@ Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/your-link
 - Technologies Used: List the technologies used in this project.
 - [Link to the project repository](Link to Project 1 Repository)
 
-### Project 2: [Project Name 2](Link to Project 2)
+### Project 2: [Building a SOC](building-a-soc/building-a-soc.md)
 
-- Description: Brief description of the project.
+- Description: In-depth description of the "Building a SOC" project.
 - Technologies Used: List the technologies used in this project.
-- [Link to the project repository](Link to Project 2 Repository)
+- [Link to the project documentation](building-a-soc/building-a-soc.md)
 
 <!-- Add more projects as needed -->
 
@@ -29,3 +29,5 @@ Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/your-link
 Feel free to reach out to me via email at [your.email@example.com].
 
 Thanks for visiting my GitHub profile! 🚀
+
+
