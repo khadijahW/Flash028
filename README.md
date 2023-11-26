@@ -2,9 +2,7 @@
 
 I'm [Your Name], a passionate 💻 software developer from [Your Location]. Welcome to my GitHub profile, where you can explore some of the projects I've been working on.
 
-<p align="center">
-  <img src="(https://github.com/Flash028/Flash028/blob/1fbe927448354f78c777b7195a4d91a745ed6a82/IMG_2025.jpg)" alt="Profile Banner" width="300">
-</p>
+![Profile Image](https://github.com/Flash028/Flash028/blob/1fbe927448354f78c777b7195a4d91a745ed6a82/IMG_2025.jpg)
 
 ## About Me
 
@@ -24,7 +22,7 @@ Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/your-link
 
 - Description: In-depth description of the "Building a SOC" project.
 - Technologies Used: List the technologies used in this project.
-- [Link to the project documentation](BUILDING-A-SOC/building-a-soc.md)
+- [Link to the project documentation](building-a-soc/building-a-soc.md)
 
 <!-- Add more projects as needed -->
 
