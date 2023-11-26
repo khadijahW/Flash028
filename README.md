@@ -1,7 +1,9 @@
 # Welcome to My GitHub Profile! 👋
 
 I'm [Your Name], a passionate [Your Profession/Interest] from [Your Location]. Welcome to my GitHub profile, where you can explore some of the projects I've been working on.
-![Profile Banner](https://github.com/Flash028/Flash028/blob/9a7517581dd3907e85c2630bf3d1638e17adb04a/building-a-soc/IMG_2025.jpg)
+
+<img src="https://github.com/Flash028/Flash028/blob/9a7517581dd3907e85c2630bf3d1638e17adb04a/building-a-soc/IMG_2025.jpg" alt="Profile Banner" width="300">
+
 ## About Me
 
 I am a [Brief Description about Yourself]. My interests include [Your Interests/Hobbies], and I am always eager to learn and explore new technologies.
@@ -25,10 +27,6 @@ Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/your-link
 <!-- Add more projects as needed -->
 
 ## Contact Me
-
-Feel free to reach out to me via email at [your.email@example.com].
-
-Thanks for visiting my GitHub profile! 🚀
 
 Feel free to reach out to me via email at [your.email@example.com].
 
