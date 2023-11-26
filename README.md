@@ -30,4 +30,8 @@ Feel free to reach out to me via email at [your.email@example.com].
 
 Thanks for visiting my GitHub profile! 🚀
 
+Feel free to reach out to me via email at [your.email@example.com].
+
+Thanks for visiting my GitHub profile! 🚀
+
 
