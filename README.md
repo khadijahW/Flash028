@@ -2,7 +2,9 @@
 
 I'm [Your Name], a passionate 💻 software developer from [Your Location]. Welcome to my GitHub profile, where you can explore some of the projects I've been working on.
 
-![Profile Image](https://github.com/Flash028/Flash028/blob/1fbe927448354f78c777b7195a4d91a745ed6a82/IMG_2025.jpg)
+<p align="center">
+  <img src="https://github.com/Flash028/Flash028/blob/1fbe927448354f78c777b7195a4d91a745ed6a82/IMG_2025.jpg" alt="Profile Image" width="150">
+</p>
 
 ## About Me
 
