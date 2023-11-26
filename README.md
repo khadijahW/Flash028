@@ -24,7 +24,7 @@ Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/your-link
 
 - Description: In-depth description of the "Building a SOC" project.
 - Technologies Used: List the technologies used in this project.
-- [Link to the project documentation](building-a-soc/building-a-soc.md)
+- [Link to the project documentation](BUILDING-A-SOC/building-a-soc.md)
 
 <!-- Add more projects as needed -->
 
