@@ -15,7 +15,7 @@ Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/your-link
 ## Projects
 
 ### Project 1: 
-[Building a SOC](https://github.com/Flash028/Flash028/blob/49c60bca3d7d1d6f0bdbe2d429fd2d773fd1e0f8/BUILDING%20A%20SOC/building-a-soc.md)
+[Building a SOC]
 
 - Description: In-depth description of the "Building a SOC" project.
 - Technologies Used: List the technologies used in this project.
