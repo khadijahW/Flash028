@@ -10,8 +10,8 @@ Mechanical Engineer with a passion for cybersecurity, I bring a unique blend of 
 ![University of Nevada, Las Vegas](https://freebiesupply.com/logos/unlv-logo/)
 I am a 🚀 tech enthusiast with interests in [Your Interests/Hobbies]. Always eager to learn and explore new technologies.
 
-Feel free to connect with me on [LinkedIn](https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile)## Projects
-
+Feel free to connect with me on LinkedIn
+(https://www.linkedin.com/in/khadijah-w-44bb48238/)
 ### Project 1: 
 [Building a SOC](https://github.com/Flash028/Flash028/blob/main/BUILDING%20A%20SOC/building-a-soc.md)
 - Description: In-depth description of the "Building a SOC" project.
