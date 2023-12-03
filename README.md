@@ -24,7 +24,7 @@ Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/your-link
 
 ## Contact Me
 
-Feel free to reach out to me via email at ✉️ [your.email@example.com].
+Feel free to reach out to me via email at ✉️ [khadijah028@yahoo.com].
 
 Thanks for visiting my GitHub profile! 🚀
 
