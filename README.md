@@ -10,7 +10,7 @@ Mechanical Engineer with a passion for cybersecurity, I bring a unique blend of 
 ![University of Nevada, Las Vegas](https://freebiesupply.com/logos/unlv-logo/)
 I am a 🚀 tech enthusiast with interests in [Your Interests/Hobbies]. Always eager to learn and explore new technologies.
 
-Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/your-linkedin-profile) or [Twitter](https://twitter.com/your-twitter-handle).
+Feel free to connect with me on [LinkedIn](https://www.linkedin.com/feed/?trk=guest_homepage-basic_nav-header-signin)://www.linkedin.com/in/your-linkedin-profile).
 
 ## Projects
 
