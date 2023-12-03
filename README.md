@@ -7,7 +7,6 @@ Mechanical Engineer with a passion for cybersecurity, I bring a unique blend of 
 </p>
 
 # Education
-
 ## Western Governors University (WGU)
 *Master of Science in Cybersecurity Information Assurance*
 - *Expected Graduation Year:* 2024
@@ -36,9 +35,6 @@ Mechanical Engineer with a passion for cybersecurity, I bring a unique blend of 
   - Biology (Advanced Placement)
   - English (Advanced Placement)
   - Anatomy (Advanced Placement)
-
- 
-
 
 Feel free to connect with me on LinkedIn
 (https://www.linkedin.com/in/khadijah-w-44bb48238/)
