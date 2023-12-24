@@ -45,7 +45,7 @@ Feel free to connect with me on LinkedIn
 
 
 ### Project 2: 
-[Vulnerability Management](https://github.com/Flash028/Flash028/blob/addaa47bf520e04fb9ccc5c1dd4a4c86f06cd98a/Vulnerability%20Assessment/Vulnerability%20Assessment.md)
+[Vulnerability Management](https://github.com/Flash028/Flash028/blob/c89fc29bdce4f1d9fbf796dc6560cadb699bdd7b/Vulnerability%20Assessment/Vulnerability.Assessment.md)
 - Description: Executed a Vulnerability Management Project utilizing Qualys and Nessus to identify and mitigate discovered vulnerabiltiies.
 - Technologies Used: Nessus Essentials.,Qualys Vulnerability Management
 
