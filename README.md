@@ -40,15 +40,14 @@ Feel free to connect with me on LinkedIn
 (https://www.linkedin.com/in/khadijah-w-44bb48238/)
 ### Project 1: 
 [Building a SOC](https://github.com/Flash028/Flash028/blob/main/BUILDING%20A%20SOC/building-a-soc.md)
-- Description: 
-- Technologies Used: 
+- Description: In this project I designed a SOC + Honeynet using the Microsoft Azure Cloud Enviroment. This initiative aimed to enhance my cybersecurity capabiltiies through simulated attack scenarious and real-time threat monitoring.
+- Technologies Used: Microsoft Azure,Microsoft Sentinel, Virtual Machines, Log Analytics Workspace
 
 
 ### Project 2: 
 [Vulnerability Management](https://github.com/Flash028/Flash028/blob/addaa47bf520e04fb9ccc5c1dd4a4c86f06cd98a/Vulnerability%20Assessment/Vulnerability%20Assessment.md)
-- Description: 
-- Technologies Used: 
-## Contact Me
+- Description: Executed a Vulnerability Management Project utilizing Qualys and Nessus to identify and mitigate discovered vulnerabiltiies.
+- Technologies Used: Nessus Essentials.,Qualys Vulnerability Management
 
 Feel free to reach out to me via email at ✉️ [khadijah028@yahoo.com].
 
