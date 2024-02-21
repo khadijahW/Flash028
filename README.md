@@ -9,7 +9,7 @@ Mechanical Engineer with a passion for cybersecurity, I bring a unique blend of 
 # Education
 ## Western Governors University (WGU)
 *Master of Science in Cybersecurity Information Assurance*
-- *Expected Graduation Year:* 2024
+- *Degree Earned*: February 2024
 - *Relevant Courses:*
   - Ethical Hacking
   - Forensic and Network Intrusion
@@ -19,12 +19,13 @@ Mechanical Engineer with a passion for cybersecurity, I bring a unique blend of 
 
 ## University of Nevada, Las Vegas (UNLV)
 *Bachelor of Science in Mechanical Engineering*
-- *Degree Earned:* May 2021
+- *Degree Earned:* July 2021
 - *Relevant Courses:*
   - Thermodynamics
   - Fluid Dynamics
   - Heat Transfer
   - Mechanics of Materials
+  - Calculus
 
 
 ## Golden Valley High School
