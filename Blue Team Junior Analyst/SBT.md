@@ -13,7 +13,7 @@ This repository contains the documentation of my expierence with SBT certificati
 - [Introduction to Vulnerability Management](#introduction-to-vulnerability-management)
 
 ## Introduction to Network Analysis
-
+** this course utilized TCP
 
 
 
