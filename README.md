@@ -50,6 +50,17 @@ Feel free to connect with me on LinkedIn
 - Description: Executed a Vulnerability Management Project utilizing Qualys and Nessus to identify and mitigate discovered vulnerabiltiies.
 - Technologies Used: Nessus Essentials.,Qualys Vulnerability Management
 
+### Project 3: 
+[Blue Team Junior Analyst Certification](https://github.com/Flash028/Flash028/blob/main/Vulnerability%20Assessment/Vulnerability.Assessment.md)
+- Description: Introduction to Network Analysis, Introduction to OSINT, Introduction to Digital Forensics, Introduction to Dark Web operations
+- Introduction to Threat Hunting, Introduction to Vulnerability Management
+- Technologies Used: Wireshark,Maltego, Based64 Decoder,
+
+
+
+
+
+
 Feel free to reach out to me via email at ✉️ [khadijah028@yahoo.com].
 
 Thanks for visiting my GitHub profile! 🚀
