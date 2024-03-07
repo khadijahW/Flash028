@@ -15,6 +15,8 @@ This repository contains the documentation of my expierence with SBT certificati
 ## Introduction to Network Analysis
 **TOOLS USED**
 - Wireshark
+
+  
 **CHALLENGE QUESTIONS**
 PCAP 1
 1. Which protocol was used over port 3942?
@@ -29,7 +31,7 @@ PCAP 2
 3. Which port was used to gain access to the victim Windows host?
 4. What is the name of a confidential file on the Windows host?
 5. What is the name of the log file that was created at 4:51 AM on the Windows host?
-
+![image](https://github.com/khadijahW/Flash028/assets/99515087/03823c79-b031-4d6d-9ccb-c4dde15f520f)
 
 
 ## Introduction to OSINT
