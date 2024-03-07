@@ -40,9 +40,9 @@ PCAP 1
 PCAP 2
 1. What is the WebAdmin password?
    
-   ![image](https://github.com/khadijahW/Flash028/assets/99515087/e914a3c0-86c4-4d4c-b9a1-28e0aec7aa1c)
+![image](https://github.com/khadijahW/Flash028/assets/99515087/e914a3c0-86c4-4d4c-b9a1-28e0aec7aa1c)
 
-   ![image](https://github.com/khadijahW/Flash028/assets/99515087/709e83c9-c120-4267-83bb-20268e31dc1e)
+![image](https://github.com/khadijahW/Flash028/assets/99515087/709e83c9-c120-4267-83bb-20268e31dc1e)
    
 3. What is the version number of the attacker’s FTP server?
 4. Which port was used to gain access to the victim Windows host?
@@ -90,15 +90,56 @@ I found that the website was redhunt.net and additional information displaying t
 ![image](https://github.com/khadijahW/Flash028/assets/99515087/f7a82835-4804-4d6b-bc41-e4c95b4bc2d5)
 
 
-## Introduction to Digital Forensics
-
-
 ## Introduction to Dark Web Operations
+  
+  ![image](https://github.com/khadijahW/Flash028/assets/99515087/897b73dd-3130-4546-bbeb-50d217bf7cba)
+
+This section reviews dark web operation and provides information regarding the sifrace,deep and dark web. Provded are images of the challenge scenarion and challenge report questions.
 
 
+![image](https://github.com/khadijahW/Flash028/assets/99515087/553b523c-7047-49ae-a3d8-a3da00acf0ca)
 
 
-## Introduction to THreat Hunting
+![image](https://github.com/khadijahW/Flash028/assets/99515087/9c6c9105-889f-4ec4-9680-c80c0a5beec7)
+
+Steps to begin this lab consisted of:
+1. Downloading TOR browser
+2. Turning on a VPN
+3. Then visiting the provided website, which allowed me to access the website seen in the image below.
+
+
+![image](https://github.com/khadijahW/Flash028/assets/99515087/d1481f38-ca40-4e49-8953-de12b2896bcf)
+I right clicked and inspected the website and utilized the console tab to find user credential by using 
+-  generateUserCredentials()
+  
+![image](https://github.com/khadijahW/Flash028/assets/99515087/c2a3fe12-fe8e-4e87-8337-84980e0872ae)
+
+Referencing the OSINT Framework for tools utilized cyberchef for decoding to find the username and password.
+
+![image](https://github.com/khadijahW/Flash028/assets/99515087/566856b1-3c72-4f33-acd1-d31e07e66717)
+
+I then utilizsed these credentials to access the site's home page. I immediately noticed that several pages were encoded.
+
+
+![image](https://github.com/khadijahW/Flash028/assets/99515087/937d207e-31e6-4093-a0f7-7fb0e20e191f)
+
+Using cyberchef, I discoved that this site says "Authentic Switzerland's choclate. You're tired of not finding good chocolate? This post is for you."
+
+![image](https://github.com/khadijahW/Flash028/assets/99515087/ed34bdb2-0d3c-442a-ad7f-2da225f81095)
+
+Decoding the information of the image from left to right:
+- Guns WANNA KNOW HOW TO BUY YOUR GUNS?, THIS IS FOR YOU
+- Recreational Drugs Buying/Selling Let the party begins! (Everything you wanna know about drug dealing)
+- Hey dude... wanna candy? (The real D king!)Deliver the package, collect the money and live like a king!
+- BBB Organs for sale Are you such an alcoholic that your kidney stopped working? Don't worry, we can get you a new one
+
+Further inspecting the site there was an image of a passport in which I utilized tp discover the name and country of the suspect.
+![image](https://github.com/khadijahW/Flash028/assets/99515087/4314df53-f124-4cbf-bf3e-39fc35430e85)
+
+- 
+
+
+## Introduction to Threat Hunting
 
 
 
