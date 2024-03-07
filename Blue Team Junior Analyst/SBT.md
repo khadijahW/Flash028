@@ -13,6 +13,7 @@ This repository contains the documentation of my expierence with SBT certificati
 - [Introduction to Vulnerability Management](#introduction-to-vulnerability-management)
 
 ## Introduction to Network Analysis
+
 **TOOLS USED**
 - Wireshark
 
@@ -49,15 +50,38 @@ PCAP 2
 
 ![image](https://github.com/khadijahW/Flash028/assets/99515087/cfe65c34-0967-4b6b-8663-d6adab9dc086)
 
+
 ## Introduction to OSINT
 
+![image](https://github.com/khadijahW/Flash028/assets/99515087/e4bf97bd-69ab-4b00-9e70-d23fe5aaa922)
+
+![image](https://github.com/khadijahW/Flash028/assets/99515087/f3d30e49-eab7-4387-984c-1ed40e30f870)
+
+**METHODOLOGY**
+To complete this section I began by going to the provided twitter account Sp1ritFyre. There was a link provided on the twitter account, but i did not lead to any destination. I then decided to do a google search on the lightbulb image on the twitter account and discovered a facebook account. I found a facebook account, but I didn't seem to provide much information. I then googled the twitter handle Sp1ritFyre and found a blog site. Provided is a photo of my discovery below:
+
+![image](https://github.com/khadijahW/Flash028/assets/99515087/b3bd0950-86e3-4aa9-8ae8-deff101834df)
 
 
+I immediately noticed that it contain an image of the same lightbulb I discovered in the twitter account. Examining the send lead me to find the email d1ved33p@gmail.com and indicated that the blog belonged to a female. I then googled the email address and found another site displaying that the owner was female,had the username Sp1ritFyre and displayeed the same email address.
 
+![image](https://github.com/khadijahW/Flash028/assets/99515087/e5b6be1c-14cc-4ef5-ae5e-90b572c241d8)
+The name displayed is Sam Wood.
+I begin probing this site for additional information and viewed the archive section and discovered a github account. I then viewed the complete profile and found that her full name is Sammie Woods.
 
+![image](https://github.com/khadijahW/Flash028/assets/99515087/4c3b9e9b-b90e-4a26-99ff-5923c139cd1f)
 
+Reading the section her occupation is a Junior Penetration Tester and she is employed as Philman Security Inc. Reviewing the challenge tips, it expressed that some information may be decoded. I then then reflected back to the twitter account in which the link had no destination. 
 
+![image](https://github.com/khadijahW/Flash028/assets/99515087/49b31f4a-a213-48d5-a23d-4edf3ac5d3c2)
 
+So, I entered the link into Base64 decoder.
+
+![image](https://github.com/khadijahW/Flash028/assets/99515087/bdd2baf3-fa1c-41f4-acde-d38b9aff151c)
+
+I found that the website was redhunt.net and additional information displaying the associated email for the website used by the hacker.
+
+![image](https://github.com/khadijahW/Flash028/assets/99515087/f7a82835-4804-4d6b-bc41-e4c95b4bc2d5)
 
 
 ## Introduction to Digital Forensics
