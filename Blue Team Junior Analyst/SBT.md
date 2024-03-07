@@ -14,8 +14,21 @@ This repository contains the documentation of my expierence with SBT certificati
 
 ## Introduction to Network Analysis
 **TOOLS USED**
-- TCP DUMP
 - Wireshark
+**CHALLENGE QUESTIONS**
+PCAP 1
+1. Which protocol was used over port 3942?
+2. What is the IP address of the host that was pinged twice?
+3. How many DNS query response packets were captured?
+4. What is the IP address of the host which sent the most number of bytes?
+ 
+
+PCAP 2
+1. What is the WebAdmin password?
+2. What is the version number of the attacker’s FTP server?
+3. Which port was used to gain access to the victim Windows host?
+4. What is the name of a confidential file on the Windows host?
+5. What is the name of the log file that was created at 4:51 AM on the Windows host?
 
 
 
