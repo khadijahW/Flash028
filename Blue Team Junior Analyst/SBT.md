@@ -12,6 +12,7 @@ This repository contains the documentation of my expierence with SBT certificati
 - [Introduction to Threat Hunting](#introduction-to-threat-hunting)
 - [Introduction to Vulnerability Management](#introduction-to-vulnerability-management)
 
+
 ## Introduction to Network Analysis
 
 **TOOLS USED**
@@ -60,7 +61,7 @@ PCAP 2
 
 **METHODOLOGY**
 
-To complete this section I began by going to the provided twitter account Sp1ritFyre. There was a link provided on the twitter account, but i did not lead to any destination. I then decided to do a google search on the lightbulb image on the twitter account and discovered a facebook account. I found a facebook account, but I didn't seem to provide much information. I then googled the twitter handle Sp1ritFyre and found a blog site. Provided is a photo of my discovery below:
+To complete this section I began by going to the provided twitter account Sp1ritFyre. There was a link provided on the twitter account, but it did not lead to any destination. I then decided to do a google search on the lightbulb image on the twitter account and discovered a facebook account. I found a facebook account, but I didn't seem to provide much information. I then googled the twitter handle Sp1ritFyre and found a blog site. Provided is a photo of my discovery below:
 
 ![image](https://github.com/khadijahW/Flash028/assets/99515087/b3bd0950-86e3-4aa9-8ae8-deff101834df)
 
