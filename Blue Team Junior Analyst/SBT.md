@@ -68,7 +68,9 @@ To complete this section I began by going to the provided twitter account Sp1rit
 
 I immediately noticed that it contain an image of the same lightbulb I discovered in the twitter account. Examining the send lead me to find the email d1ved33p@gmail.com and indicated that the blog belonged to a female. I then googled the email address and found another site displaying that the owner was female,had the username Sp1ritFyre and displayeed the same email address.
 
+<p align="center">
 ![image](https://github.com/khadijahW/Flash028/assets/99515087/e5b6be1c-14cc-4ef5-ae5e-90b572c241d8)
+</p>
 
 The name displayed is Sam Wood.
 I begin probing this site for additional information and viewed the archive section and discovered a github account. I then viewed the complete profile and found that her full name is Sammie Woods.
