@@ -51,7 +51,7 @@ Feel free to connect with me on LinkedIn
 - Technologies Used: Nessus Essentials.,Qualys Vulnerability Management
 
 ### Project 3: 
-[Blue Team Junior Analyst Certification]([https://github.com/khadijahW/Flash028/blob/main/Blue%20Team%20Junior%20Analyst/SBT.md])
+[Blue Team Junior Analyst Certification](https://github.com/khadijahW/Flash028/blob/main/Blue%20Team%20Junior%20Analyst/SBT.md)
 - Description: Introduction to Network Analysis, Introduction to OSINT, Introduction to Digital Forensics, Introduction to Dark Web operations
 - Introduction to Threat Hunting, Introduction to Vulnerability Management
 - Technologies Used: Wireshark, Maltego, Based64 Decoder, OSINT Framework
