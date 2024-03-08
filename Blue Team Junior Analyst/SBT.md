@@ -136,8 +136,6 @@ Decoding the information of the image from left to right:
 Further inspecting the site there was an image of a passport in which I utilized tp discover the name and country of the suspect.
 ![image](https://github.com/khadijahW/Flash028/assets/99515087/4314df53-f124-4cbf-bf3e-39fc35430e85)
 
-- 
-
 
 ## Introduction to Threat Hunting
 
