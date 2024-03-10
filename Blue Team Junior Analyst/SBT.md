@@ -40,7 +40,6 @@ PCAP 1
 
 PCAP 2
 1. What is the WebAdmin password?
-   
 <img src =" https://github.com/khadijahW/Flash028/assets/99515087/e914a3c0-86c4-4d4c-b9a1-28e0aec7aa1c" width="500">
 
 <img src ="https://github.com/khadijahW/Flash028/assets/99515087/709e83c9-c120-4267-83bb-20268e31dc1e" wifth="500">
