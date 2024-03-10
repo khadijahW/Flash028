@@ -72,8 +72,7 @@ I immediately noticed that it contain an image of the same lightbulb I discovere
 ![image](https://github.com/khadijahW/Flash028/assets/99515087/e5b6be1c-14cc-4ef5-ae5e-90b572c241d8)
 
 
-The name displayed is Sam Wood.
-I begin probing this site for additional information and viewed the archive section and discovered a github account. I then viewed the complete profile and found that her full name is Sammie Woods.
+The name displayed is Sam Wood. I begin probing this site for additional information and viewed the archive section and discovered a github account. I then viewed the complete profile and found that her full name is Sammie Woods.
 
 ![image](https://github.com/khadijahW/Flash028/assets/99515087/4c3b9e9b-b90e-4a26-99ff-5923c139cd1f)
 
