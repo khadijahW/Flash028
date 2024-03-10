@@ -17,7 +17,6 @@ This module consisted of delving into the basics of network analysis, understand
 
 **TOOLS USED**
 - Wireshark
-
   
 **CHALLENGE QUESTIONS**
 PCAP 1
@@ -67,12 +66,11 @@ This section focused on exploring the tools and techniques for gathering informa
 
 **METHODOLOGY**
 
-To navigate through this segment. I begin by visiting the provided Twitter account, Sp1ritFyre. This account contained a link, which upon exploration lead to anu nexpected deade end. I then began investing the light bulb image prominently displated on the Twitter profile. This image me directed me towards a Facebook page. ALthough the intial discovery seemed promising, the Facebook account ultimately fell short of providing any leads on identifying the hacker. I then decided to turn to Google directly with the Twitter handle, Sp1ritFyre, as my search keyword. This unveiled a blog site.
+To navigate through this segment. I begin by visiting the provided Twitter account, Sp1ritFyre. This account contained a link, which upon exploration lead to anu nexpected deade end. I then began investing the light bulb image prominently displated on the Twitter profile. This image me directed me towards a Facebook page. Although the intial discovery seemed promising, the Facebook account ultimately fell short of providing any leads on identifying the hacker. I then decided to turn to Google directly with the Twitter handle, Sp1ritFyre, as my search keyword. This unveiled a blog site.
 
 Below, is a visual snapshot of the blog site.
 
 <img src="https://github.com/khadijahW/Flash028/assets/99515087/b3bd0950-86e3-4aa9-8ae8-deff101834df" width="600">
-
 
 I immediately noticed that it contain an image of the same lightbulb I discovered in the twitter account. Examining the send lead me to find the email d1ved33p@gmail.com and indicated that the blog belonged to a female. I then googled the email address and found another site displaying that the owner was female,had the username Sp1ritFyre and displayeed the same email address.
 
@@ -101,7 +99,7 @@ I found that the website was redhunt.net and additional information displaying t
   
 <img src="https://github.com/khadijahW/Flash028/assets/99515087/897b73dd-3130-4546-bbeb-50d217bf7cba" width="500">
 
-This section reviews dark web operation and provides information regarding the sifrace,deep and dark web. Provded are images of the challenge scenario and challenge report questions.
+This section reviews dark web operation and provides information regarding the surface,deep and dark web. Provded are images of the challenge scenario and challenge report questions.
 
 <img src ="https://github.com/khadijahW/Flash028/assets/99515087/553b523c-7047-49ae-a3d8-a3da00acf0ca" width =" 500">
 
