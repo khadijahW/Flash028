@@ -119,9 +119,6 @@ Referencing the OSINT Framework for tools utilized cyberchef for decoding to fin
 
 I then utilizsed these credentials to access the site's home page. I immediately noticed that several pages were encoded.
 
-<img src="https://github.com/khadijahW/Flash028/assets/99515087/937d207e-31e6-4093-a0f7-7fb0e20e191f" width="100" />
-
-
 
 ![image](https://github.com/khadijahW/Flash028/assets/99515087/937d207e-31e6-4093-a0f7-7fb0e20e191f)
 
@@ -146,6 +143,7 @@ Further inspecting the site there was an image of a passport in which I utilized
 
 ## Introduction to Vulnerability Management
 
+<img src="https://github.com/khadijahW/Flash028/assets/99515087/937d207e-31e6-4093-a0f7-7fb0e20e191f" width="100" />
 
 
 
