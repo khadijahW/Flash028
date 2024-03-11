@@ -17,8 +17,8 @@ This guide outlines the detailed steps to I used to set up an Active Directory e
 - Adapter 1: I set to NAT to allow the server to access the internet. This connection was essential for updates and software installations, ensuring my server was up to date and secure.
 - Adapter 2: I configured as an Internal Network. This setting was crucial for creating a controlled environment that mimicked a real-world network topology. It enabled seamless communication within my virtualized network environment, allowing me to test and develop in a realistic setting.
   <img src= "https://github.com/khadijahW/Flash028/assets/99515087/e89018da-4738-4fbb-8f7e-d1b61ffb59c4" width="500">
-**Step 2: Initial VM Configuration**
 
+**Step 2: Initial VM Configuration**
 Continuing with my setup process, I moved on to enhancing the interaction between my host machine and the Virtual Machine (VM) to make my work easier and more efficient.
 
 **Inserting Guest Additions CD Image**
