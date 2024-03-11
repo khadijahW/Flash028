@@ -1,7 +1,9 @@
 ## Active Directory Lab
 
 <img src="https://github.com/khadijahW/Flash028/assets/99515087/d37f8a27-0ef2-458e-8c00-4aa984cdcfc4" width="900">
+
 **Description**
+
 This project aims to simplify the setup and management of Active Directory (AD) environments. It includes scripts, configuration templates, and documentation designed to automate and streamline the deployment, management, and troubleshooting of Active Directory services. 
 
 **Prerequisites**
