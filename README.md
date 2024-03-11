@@ -57,10 +57,9 @@ Feel free to connect with me on LinkedIn
 - Technologies Used: Wireshark, Maltego, Based64 Decoder, OSINT Framework
 
 ### Project 4: 
-[Active Directory ](https://github.com/khadijahW/Flash028/blob/main/Blue%20Team%20Junior%20Analyst/SBT.md)
-- Description: Introduction to Network Analysis, Introduction to OSINT, Introduction to Digital Forensics, Introduction to Dark Web operations
-- Introduction to Threat Hunting, Introduction to Vulnerability Management
-- Technologies Used: Wireshark, Maltego, Based64 Decoder, OSINT Framework
+[Active Directory ](https://github.com/khadijahW/Flash028/blob/main/Active%20Directory.md))
+- Description: Deploed a Microsoft Server with 2016 and Windows 10 Machine for active directory configuration.
+- Technologies Used: VMWARE VirtualBox,Microsoft Server 2019, Windows 10
 
 
 
