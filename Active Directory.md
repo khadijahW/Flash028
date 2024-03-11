@@ -3,11 +3,10 @@
 This project aims to simplify the setup and management of Active Directory (AD) environments. It includes scripts, configuration templates, and documentation designed to automate and streamline the deployment, management, and troubleshooting of Active Directory services. 
 
 **Prerequisites**
-- Windows Server 2019 or newer.
-- PowerShell 5.1 or newer.
+- Windows Server 2019 or newer
 - VMWARE or Virtual Box
 
-This guide outlines the detailed steps to I used to set up an Active Directory environment on a Windows Server 2019 instance running in Oracle VM VirtualBox. This setup is crucial for creating a controlled, simulated network environment for testing and development purposes.
+This guide outlines the detailed steps to I used to set up an Active Directory environment on a Windows Server 2019 instance running in Oracle VM VirtualBox. 
 
 **Step 1: Install Windows Server 2019 on VirtualBox**
 -Setting up the Virtual Machine
@@ -15,21 +14,11 @@ This guide outlines the detailed steps to I used to set up an Active Directory e
 - Adjusting Network Settings
   -Next, I configured two network adapters for the VM to facilitate its operation within a simulated network environment:
 - Adapter 1: I set to NAT to allow the server to access the internet. This connection was essential for updates and software installations, ensuring my server was up to date and secure.
-- Adapter 2: I configured as an Internal Network. This setting was crucial for creating a controlled environment that mimicked a real-world network topology. It enabled seamless communication within my virtualized network environment, allowing me to test and develop in a realistic setting.
+- Adapter 2: I configured as an Internal Network that connects to the domain host and client machine.
   
   <img src= "https://github.com/khadijahW/Flash028/assets/99515087/e89018da-4738-4fbb-8f7e-d1b61ffb59c4" width="500">
 
-**Step 2: Initial VM Configuration**
-Continuing with my setup process, I moved on to enhancing the interaction between my host machine and the Virtual Machine (VM) to make my work easier and more efficient.
-
-**Inserting Guest Additions CD Image**
-To achieve this, I navigated to the "Devices" menu in the VirtualBox interface and selected "Insert Guest Additions CD Image." This action was essential for improving functionalities such as clipboard sharing and window scaling, which are critical for an efficient workflow when managing multiple environments.
-
-**Installing Guest Additions**
-Once the Guest Additions CD Image was inserted, I opened File Explorer within the VM and navigated to the CD drive that contained the VirtualBox Guest Additions. I found the installer suitable for AMD64 systems and ran it. The installation process was straightforward and, upon completion, required a shutdown of the VM to apply the changes effectively.
-
-
-**Step 3: Network Configuration Inside the VM**
+**Step 2: Network Configuration Inside the VM**
 
 **Accessing Network and Sharing Center**
 First, I navigated to the Control Panel within the VM, selected "Network and Internet," and then went to the "Network and Sharing Center." From there, I clicked on "Change adapter settings" to view and manage the network adapters.
@@ -38,9 +27,9 @@ First, I navigated to the Control Panel within the VM, selected "Network and Int
 Among the listed adapters, I identified the one connected to the Internet, which was using NAT (Network Address Translation). By right-clicking on this adapter, selecting "Status," and then "Details," I was able to note the IP address, which was in the 10.0.X.X range. Recognizing the importance of clear and easy identification for future steps, I renamed this adapter to "Internet."
 
 **System Rename for Domain Controller**
-The next crucial step involved renaming the computer to prepare it for its role as a Domain Controller (DC). By right-clicking on the Start button and selecting "System," I was able to access the system properties and rename the computer to "DC." I followed the prompts to restart the computer, a necessary action to ensure the name change took effect.
+The next step involved renaming the computer to prepare it for its role as a Domain Controller (DC). By right-clicking on the Start button and selecting "System," I was able to access the system properties and rename the computer to "DC." I followed the prompts to restart the computer, a necessary action to ensure the name change took effect.
 
-**Step 4: Configuring IP Address for the Internal NIC**
+**Step 3: Configuring IP Address for the Internal NIC**
 
 **Setting the Static IP for the Internal Network Adapter**
 I navigated back to the "Network and Sharing Center" and clicked on "Change adapter options" to access the network adapters. I right-clicked on the adapter that was designated for the internal network (not the one I had renamed to "Internet") and selected "Properties" from the context menu.
@@ -58,30 +47,30 @@ In the adapter's properties, I focused on the "Internet Protocol Version 4 (TCP/
 
 <img src= "https://github.com/khadijahW/Flash028/assets/99515087/01e499fa-3619-4827-81ee-c8246d55ee20" width="500">
 
-**Step 5: Launch Server Manager**
+**Step 4: Launch Server Manager**
 
 Once my VM was up and running again, I opened Server Manager directly from the Start menu. It's also accessible from the taskbar if it's pinned there, offering a straightforward way to jump into the management of server roles, features, and overall system configuration.
 
-**Step 6: Add Roles and Features**
+**Step 5: Add Roles and Features**
 Continuing with the setup of my Active Directory lab, I moved on to initiating the wizard for adding roles and features.
 
 **Initiating the Wizard**
 - From the Server Manager dashboard, I located and clicked on "Add roles and features." This action launched the Add Roles and Features Wizard, which is designed to guide users through the installation process in a step-by-step manner.
 
 **Choosing Installation Type**
-- Within the wizard, I was presented with various installation type options. I ensured that the "Role-based or feature-based installation" option was selected. This option is essential for setting up specific roles on the server. After selecting it, I clicked "Next" to proceed.
+- Within the wizard, I was presented with various installation type options. I ensured that the "Role-based or feature-based installation" option was selected. After selecting it, I clicked "Next" to proceed.
 
 **Server Selection**
 - The next step brought me to the Server Selection phase. Here, the wizard automatically highlighted my current server, which is the standard behavior when you're working directly on the server you intend to configure. I confirmed that my server was selected and then clicked "Next" to continue.
 
 **Adding Active Directory Domain Services Role**
-- In the Roles list, I scrolled until I found "Active Directory Domain Services" and selected it. This action is pivotal as it initiates the addition of the primary role necessary for creating a domain environment.
+- In the Roles list, I scrolled until I found "Active Directory Domain Services" and selected it. This action is pivotal as it initiates the addition of the primary role necessary for creating a domain environment
 - Upon selecting Active Directory Domain Services, a new window popped up, suggesting adding features that are required for AD DS. I clicked "Add Features" on this prompt, acknowledging the necessity of these additional features for a fully functional AD DS environment.
 - After adding the necessary features, I clicked "Next" to proceed. I chose to skip the Features section by leaving everything at their default settings, as recommended for most standard setups, and clicked "Next" again.
 **Confirmation and Installation**
-- The wizard then presented me with a summary of my selections for review. After verifying that everything was correctly set up, I clicked "Install." The installation process began, with the comforting note that no restart would be required immediately, allowing me to continue using the server or even close the wizard. 
+- The wizard then presented me with a summary of my selections for review. After verifying that everything was correctly set up, I clicked "Install." The installation process began, with the note that no restart would be required immediately, allowing me to continue using the server or even close the wizard. 
 
-**Step 7: Configure Active Directory Domain Services**
+**Step 6: Configure Active Directory Domain Services**
 - Launching AD DS Configuration
   - I noticed a notification flag with a yellow exclamation mark at the top right corner of the Server Manager dashboard, indicating the completion of the role installation. Clicking on this flag revealed a drop-down menu, from which I selected "Promote this server to a domain controller." This action launched the Active Directory Domain Services Configuration Wizard.
 - Promotion Wizard Steps
@@ -96,7 +85,7 @@ Continuing with the setup of my Active Directory lab, I moved on to initiating t
 - Review Options and Prerequisites Check
   - The wizard then presented a summary of my choices for review. After ensuring all configurations were correct, I proceeded with the prerequisites check.
 
-**Step 8: Creating a Dedicated Admin Account**
+**Step 7: Creating a Dedicated Admin Account**
 Accessing Active Directory Users and Computers
 I opened the "Active Directory Users and Computers" tool by clicking on the Start menu, navigating to the "Windows Administrative Tools" folder, and selecting "Active Directory Users and Computers." This tool is indispensable for AD management tasks.
 Creating an Organizational Unit for Admin Accounts
