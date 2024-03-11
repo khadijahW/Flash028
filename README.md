@@ -58,7 +58,7 @@ Feel free to connect with me on LinkedIn
 
 ### Project 4: 
 [Active Directory](https://github.com/khadijahW/Flash028/blob/main/Active%20Directory.md)
-- Description: Deploed a Microsoft Server with 2016 and Windows 10 Machine for active directory configuration.
+- Description: Deployed a Microsoft Server with 2016 and Windows 10 Machine for active directory configuration.
 - Technologies Used: VMWARE VirtualBox,Microsoft Server 2019, Windows 10
 
 
