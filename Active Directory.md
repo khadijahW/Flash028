@@ -16,6 +16,7 @@ This guide outlines the detailed steps to I used to set up an Active Directory e
   -Next, I configured two network adapters for the VM to facilitate its operation within a simulated network environment:
 - Adapter 1: I set to NAT to allow the server to access the internet. This connection was essential for updates and software installations, ensuring my server was up to date and secure.
 - Adapter 2: I configured as an Internal Network. This setting was crucial for creating a controlled environment that mimicked a real-world network topology. It enabled seamless communication within my virtualized network environment, allowing me to test and develop in a realistic setting.
+  
   <img src= "https://github.com/khadijahW/Flash028/assets/99515087/e89018da-4738-4fbb-8f7e-d1b61ffb59c4" width="500">
 
 **Step 2: Initial VM Configuration**
