@@ -15,6 +15,9 @@ Mechanical Engineer with a passion for cybersecurity, I bring a unique blend of 
   - Forensic and Network Intrusion
   - Secure Software Design
   - Secure Network Design
+  - Information Security and Assurance
+  - Cybersecurity Management I
+  - Cybersecurity Management II
 
 
 ## University of Nevada, Las Vegas (UNLV)
@@ -25,17 +28,7 @@ Mechanical Engineer with a passion for cybersecurity, I bring a unique blend of 
   - Fluid Dynamics
   - Heat Transfer
   - Mechanics of Materials
-  - Calculus
-
-
-## Golden Valley High School
-*High School Diploma*
-- *Graduation Year:* 2014
-- *Relevant Courses:*
-  - Physics (Advanced Placement)
-  - Biology (Advanced Placement)
-  - English (Advanced Placement)
-  - Anatomy (Advanced Placement)
+  - Calculus 1,2&3
 
 Feel free to connect with me on LinkedIn
 (https://www.linkedin.com/in/khadijah-w-44bb48238/)
@@ -61,11 +54,11 @@ Feel free to connect with me on LinkedIn
 - Description: Deployed a Microsoft Server with 2016 and Windows 10 Machine for active directory configuration.
 - Technologies Used: VMWARE VirtualBox,Microsoft Server 2019, Windows 10
 
+### Project 5: 
+[Azure Cloud Resume]
 
 
 
-
-Feel free to reach out to me via email at ✉️ [khadijah028@yahoo.com].
 
 Thanks for visiting my GitHub profile! 🚀
 
