@@ -55,7 +55,7 @@ Feel free to connect with me on LinkedIn
 - Technologies Used: VMWARE VirtualBox,Microsoft Server 2019, Windows 10
 
 ### Project 5: 
-[Azure Cloud Resume]
+[Azure Cloud Resume] ***Coming Soon***
 
 
 
