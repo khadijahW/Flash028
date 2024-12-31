@@ -1,7 +1,6 @@
 # Welcome to My GitHub Profile! 👋
 
-Mechanical Engineer with a passion for cybersecurity, I bring a unique blend of analytical thinking and problem solving skills to the world of information security. Eager to apply my engineering background in a new context, I'm diving into the realm of cybersecurity. I am currenetly learning  and evolving my skills to bridge the gap between physical and digital world for a more secure future!
-
+Hi there! I'm a cybersecurity professional who specializes in ensuring compliance,securing systems and improving organizational hygiene.
 <p align="center">
   <img src="https://github.com/Flash028/Flash028/blob/1fbe927448354f78c777b7195a4d91a745ed6a82/IMG_2025.jpg" alt="Profile Image" width="650">
 </p>
@@ -27,15 +26,6 @@ Mechanical Engineer with a passion for cybersecurity, I bring a unique blend of 
   - Mechanics of Materials
   - Calculus
 
-
-## Golden Valley High School
-*High School Diploma*
-- *Graduation Year:* 2014
-- *Relevant Courses:*
-  - Physics (Advanced Placement)
-  - Biology (Advanced Placement)
-  - English (Advanced Placement)
-  - Anatomy (Advanced Placement)
 
 Feel free to connect with me on LinkedIn
 (https://www.linkedin.com/in/khadijah-w-44bb48238/)
@@ -65,7 +55,7 @@ Feel free to connect with me on LinkedIn
 
 
 
-Feel free to reach out to me via email at ✉️ [khadijah028@yahoo.com].
+
 
 Thanks for visiting my GitHub profile! 🚀
 
