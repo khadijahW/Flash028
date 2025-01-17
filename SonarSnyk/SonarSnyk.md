@@ -24,7 +24,7 @@ Install all components, including pgAdmin (a GUI for managing PostgreSQL).
 
 
 ## Create a SonarQube Database:
-1. Open pgAdmin and log in using the credentials you set during installation.
+1. Open pgAdmin 4  and log in using the credentials you set during installation.
 2. Right-click Databases > Create > Database:
 3. Database Name: sonarqube
 4. Owner: postgres
