@@ -17,7 +17,6 @@ In this project I will use SAST, DAST, Dependencies, and Secrets Scanning with S
 - Visit [PostgreSQL Downloads](https://www.postgresql.org/download/windows/)
 Download and run the installer for your version of Windows.
 Run the PostgreSQL Installer:
-
 During installation:
 Set a password for the default PostgreSQL user (postgres).
 Install all components, including pgAdmin (a GUI for managing PostgreSQL).
