@@ -29,6 +29,7 @@ Install all components, including pgAdmin (a GUI for managing PostgreSQL).
 3. Database Name: sonarqube
 4. Owner: postgres
 5. Click Save.
+   
 ![SonarQube Database Creation in Postgres](https://github.com/khadijahW/Flash028/blob/fba56ac966190cdc109bc5b0b98c0e395079fb62/SonarSnyk/databasecreation.png)
 
 
@@ -68,38 +69,31 @@ During installation, check the box to install npm (Node Package Manager).
 Install the Snyk CLI:
 
 Open Command Prompt and run:
-cmd
-Copy
-Edit
-npm install -g snyk
-Authenticate Snyk:
+ cmd -> Copy ->Edit -> npm install -g snyk 
 
-Run:
-cmd
-Copy
-Edit
-snyk auth
-This will open a browser window where you can log in to your Snyk account.
+Authenticate Snyk:
+Run: -> cmd -> Copy -> Edit -> snyk auth
+- This will open a browser window where you can log in to your Snyk account.
 Run Dependency and Secrets Scanning:
 
 Navigate to your project folder in Command Prompt:
-cmd
-Copy
-Edit
+cmd -> Copy -> Edit
 cd C:\path\to\your\project
+
+# Scanning Dependencies 
 Scan for dependencies:
-cmd
-Copy
-Edit
-snyk test
+cmd -> Copy -> Edit -> snyk test
+
+# Scanning for Secrets 
 Scan for secrets:
 cmd
 Copy
 Edit
 snyk code
+
+# Sample Project 
 4. Create and Analyze a Sample Project
 Create a Simple Project:
-
 Use a basic programming project for testing, e.g., a Node.js or Python project.
 Example: Create a simple Node.js app:
 cmd
