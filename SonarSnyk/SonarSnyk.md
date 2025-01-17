@@ -24,23 +24,22 @@ Install all components, including pgAdmin (a GUI for managing PostgreSQL).
 
 
 
+## Create a SonarQube Database:
+1. Open pgAdmin and log in using the credentials you set during installation.
+2. Right-click Databases > Create > Database:
+3. Database Name: sonarqube
+4. Owner: postgres
+5. Click Save.
 
-Create a SonarQube Database:
-Open pgAdmin and log in using the credentials you set during installation.
-Right-click Databases > Create > Database:
-Database Name: sonarqube
-Owner: postgres
-Click Save.
-  
-2. Install and Configure SonarQube on Windows
-Download SonarQube:
+## Installing SonarQube
+1. Install and Configure SonarQube on Windows
+- Download SonarQube:
+- Go to [SonarQube Downloads](https://www.sonarsource.com/products/sonarqube/downloads/).
+- Download the latest version of SonarQube Community Edition.
+- Extract SonarQube:
+- Unzip the downloaded file to a folder, e.g., C:\SonarQube.
+- Configure SonarQube to Use PostgreSQL:
 
-Go to SonarQube Downloads.
-Download the latest version of SonarQube Community Edition.
-Extract SonarQube:
-
-Unzip the downloaded file to a folder, e.g., C:\SonarQube.
-Configure SonarQube to Use PostgreSQL:
 
 Open the sonar.properties file in C:\SonarQube\conf using a text editor.
 Find and update the following properties:
@@ -55,14 +54,14 @@ Start SonarQube:
 Navigate to the C:\SonarQube\bin\windows-x86-64 folder.
 Double-click StartSonar.bat.
 
-
-
+## Accessing SonarQube
 Once started, open your browser and go to http://localhost:9000.
 Default credentials: admin / admin (you’ll be prompted- to change the password).
 
+
+## Snyk Installlation
 3. Set Up Snyk for Dependency and Secrets Scanning
 Install Node.js:
-
 Download and install the latest Node.js from Node.js Downloads.
 During installation, check the box to install npm (Node Package Manager).
 Install the Snyk CLI:
