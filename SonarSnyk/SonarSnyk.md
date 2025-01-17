@@ -29,7 +29,7 @@ Install all components, including pgAdmin (a GUI for managing PostgreSQL).
 3. Database Name: sonarqube
 4. Owner: postgres
 5. Click Save.
-![SonarQube Database Creation in Postgres](
+![SonarQube Database Creation in Postgres](https://github.com/khadijahW/Flash028/blob/fba56ac966190cdc109bc5b0b98c0e395079fb62/SonarSnyk/databasecreation.png)
 
 
 ## Installing SonarQube
