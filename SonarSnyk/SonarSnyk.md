@@ -44,14 +44,14 @@ Install all components, including pgAdmin (a GUI for managing PostgreSQL).
 
 
 Open the sonar.properties file in C:\SonarQube\conf using a text editor.
-Find and update the following properties:
-properties
-Copy
-Edit
-sonar.jdbc.username=postgres
-sonar.jdbc.password=your_password
-sonar.jdbc.url=jdbc:postgresql://localhost:5432/sonarqube
-Start SonarQube:
+- Find and update the following properties:
+- properties
+- Copy
+- Edit
+- sonar.jdbc.username=postgres
+- sonar.jdbc.password=your_password
+- sonar.jdbc.url=jdbc:postgresql://localhost:5432/sonarqube
+- Start SonarQube:
 
 Navigate to the C:\SonarQube\bin\windows-x86-64 folder.
 Double-click StartSonar.bat.
