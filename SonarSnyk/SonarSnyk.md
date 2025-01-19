@@ -71,7 +71,7 @@ Download and install the latest Node.js from Node.js Downloads.
 
 During installation, check the box to install npm (Node Package Manager).
 
-Install the Snyk CLI:
+Install the Snyk CLI
 
 Open Command Prompt and run:
 -  npm install -g snyk 
@@ -87,24 +87,9 @@ UI can be accessed by navigating to
 https://app.snyk.io
   
 
-# Sample Project 
-4. Create and Analyze a Sample Project
-- Create a Simple Project:
-- Use a basic programming project for testing, e.g., a Node.js or Python project.
-- mkdir C:\MyProject
-- cd C:\MyProject
-- npm init -y
-- npm install express
-- Add a simple app.js file:
-- echo app.js
-
-      const express = require("express");
-      const app = express();
-      app.get("/", (req, res) => res.send("Hello, world!"));
-      app.listen(3000, () => console.log("App running on port 3000"));
 
 
-Analyze the Project with SonarQube and Snyk:
+Analyze a Project with SonarQube and Snyk:
 
    
 SonarQube: SAST (Static Analysis).
