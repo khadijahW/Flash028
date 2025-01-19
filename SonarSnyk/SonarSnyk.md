@@ -89,16 +89,14 @@ https://app.snyk.io
 
 # Sample Project 
 4. Create and Analyze a Sample Project
-Create a Simple Project:
-Use a basic programming project for testing, e.g., a Node.js or Python project.
-Example: Create a simple Node.js app:
-
-mkdir C:\MyProject
-cd C:\MyProject
-npm init -y
-npm install express
-Add a simple app.js file:
-echo app.js
+- Create a Simple Project:
+- Use a basic programming project for testing, e.g., a Node.js or Python project.
+- mkdir C:\MyProject
+- cd C:\MyProject
+- npm init -y
+- npm install express
+- Add a simple app.js file:
+- echo app.js
 
       const express = require("express");
       const app = express();
@@ -106,31 +104,7 @@ echo app.js
       app.listen(3000, () => console.log("App running on port 3000"));
 
 
-Analyze the Project with SonarQube:
-
-## Install the SonarScanner CLI:
-
-Download the scanner from SonarQube Scanner Downloads.
-- https://docs.sonarsource.com/sonarqube-server/9.9/analyzing-source-code/scanners/sonarscanner/
-
-Extract it to a folder, e.g., C:\SonarScanner.
-
-Configure the scanner:
-
-Open C:\SonarScanner\conf\sonar-scanner.properties and set:
-
-      sonar.host.url=http://localhost:9000
-
-      sonar.login=your_sonarqube_token
-
-      Replace your_sonarqube_token with a token from the SonarQube UI under My Account > Security.
-
-Run the scanner in your project directory:
-
-sonar-scanner
-
-- View the Results:
-
+Analyze the Project with SonarQube and Snyk:
 
    
 SonarQube: SAST (Static Analysis).
