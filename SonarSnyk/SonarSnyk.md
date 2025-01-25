@@ -127,7 +127,7 @@ with:
 
   ```
 Running the yml workflow file with Github Actions
-![image.png]
+![image.png](https://github.com/khadijahW/Flash028/blob/e3dbd2ac00feb8ff6a2645113904aa6dc16e3c6f/SonarSnyk/image.png)
 
 The results of the SonarQube Scan
 ![image.png](https://github.com/khadijahW/Flash028/blob/bb26deda5b4200fd171484edb2c53e9658decadd/SonarSnyk/image%20(1).png)
