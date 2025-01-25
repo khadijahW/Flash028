@@ -8,6 +8,8 @@ In this project I will use SAST, DAST, Dependencies, and Secrets Scanning with S
 2. Snyk
 - Software composition Analysus(SCA) scans for known vulnerabiltieis in open-source dependencies.
 - support container image scanning and IaC misconfiguration detection
+3. OWASP ZAP
+- 
 
 
 ## Installation Instructions
@@ -70,6 +72,9 @@ Install Node.js:
 Download and install the latest Node.js from Node.js Downloads.
 
 During installation, check the box to install npm (Node Package Manager).
+<br/></br>
+
+
 
 Install the Snyk CLI
 
