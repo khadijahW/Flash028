@@ -133,4 +133,4 @@ The results of the SonarQube Scan
 # Setting up Snyk
 In docker go to
 - Extensions -> manage ->  then search for Snyk and install
-- 
+![snyk docker](https://github.com/khadijahW/Flash028/blob/6e0813e51c1e8778958461fc67dad14687ed9f56/SonarSnyk/imasnyk/snyk%20docker)
