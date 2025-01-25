@@ -41,8 +41,6 @@ note this code including password are from edX labs:no actual passwords are expo
 docker run -d --name sonarqube -p 9000:9000 -e sonar.jdbc.url=jdbc:postgresql://postgres/postgres -e sonar.jdbc.username=root -e sonar.jdbc.password=Test12345 --network mynet sonarqube
 ```
 
-![image.png](https://github.com/khadijahW/Flash028/blob/bb26deda5b4200fd171484edb2c53e9658decadd/SonarSnyk/image%20(1).png)
-
 
 ## Integrating SonarQube with Github
 - In sonarqube go to projects and import from github
