@@ -17,9 +17,9 @@ In this project I will use SAST, DAST and SCA tools to check code for vulnerabil
 ## Creating Containers 
 Install Docker Desktop App
 - then open cmd and run
-  ```
-  wsl --install
-  ```
+ ```
+ wsl --install
+ ```
   
 ## In vscode 
 ```sh
@@ -49,17 +49,16 @@ docker run -d --name sonarqube -p 9000:9000 -e sonar.jdbc.url=jdbc:postgresql://
 - Github API url: *https://api.github.com*
 - Personal Access Token
 - To create
-  ```
-  Navigate to your GitHub account settings.
-  Click on Developer settings in the left sidebar.
-  Select Personal access tokens.
-  Click on Generate new token.
-  Provide a descriptive name for the token (e.g., "SonarQube Integration").
-  Set the expiration date as needed.
-  Select the necessary scopes for the token. For SonarQube integration, the repo scope is typically sufficient.
-  Click Generate token.
-  Copy the generated token and store it securely; you won't be able to view it again.
-   ```
+1. Navigate to your GitHub account settings.
+2. Click on Developer settings in the left sidebar.
+3. Select Personal access tokens.
+4. Click on Generate new token.
+5. Provide a descriptive name for the token (e.g., "SonarQube Integration").
+6. Set the expiration date as needed.
+7. Select the necessary scopes for the token. For SonarQube integration, the repo scope is typically sufficient.
+8. Click Generate token.
+9. Copy the generated token and store it securely; you won't be able to view it again.
+
 Setting up the app integration 
 ```
 developer settings
@@ -129,3 +128,9 @@ Running the yml workflow file with Github Actions
 
 The results of the SonarQube Scan
 ![image.png](https://github.com/khadijahW/Flash028/blob/bb26deda5b4200fd171484edb2c53e9658decadd/SonarSnyk/image%20(1).png)
+
+
+# Setting up Snyk
+In docker go to
+- Extensions -> manage ->  then search for Snyk and install
+- 
