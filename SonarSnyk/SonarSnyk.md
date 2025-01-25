@@ -41,7 +41,8 @@ note this code including password are from edX labs:no actual passwords are expo
 docker run -d --name sonarqube -p 9000:9000 -e sonar.jdbc.url=jdbc:postgresql://postgres/postgres -e sonar.jdbc.username=root -e sonar.jdbc.password=Test12345 --network mynet sonarqube
 ```
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/fbb6c630-6f61-42ea-9714-a8c95091b6fc/13384c3c-14ae-451d-9f13-5be67976cf0c/image.png)
+![image.png](https://github.com/khadijahW/Flash028/blob/bb26deda5b4200fd171484edb2c53e9658decadd/SonarSnyk/image%20(1).png)
+
 
 ## Integrating SonarQube with Github
 - In sonarqube go to projects and import from github
@@ -71,16 +72,14 @@ deselect active for Webhook
 for permissions pull request is required to be write
 Then install the application to all repositiories
 ```
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/fbb6c630-6f61-42ea-9714-a8c95091b6fc/06d13c8d-3f35-4af7-bf24-8e66fd8d7f88/image.png)
+![image.png]
 
 Then in sonarqube click account 
 
 - my account
 - security and generate a new token for the repository to be scanned
 - Then for that repository in github create that secret
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/fbb6c630-6f61-42ea-9714-a8c95091b6fc/643d50ac-723a-4d0c-baaf-71ab4e835989/image.png)
-
-
+![image.png]
 Next copy the build and analysis code provided from sonarqube into a build.yml file 
 - keep in mind that sonarqube is running in a docker container so the build will fail
     - download ngrok to expose the container
@@ -128,7 +127,7 @@ with:
 
   ```
 Running the yml workflow file with Github Actions
-![image.png](attachment:f15cdc08-a097-417f-8439-dbc07268a88f:image.png)
+![image.png]
 
 The results of the SonarQube Scan
-![image.png](attachment:8bc989ae-d581-44ad-951e-209b57fd0a37:image.png)
+![image.png](https://github.com/khadijahW/Flash028/blob/bb26deda5b4200fd171484edb2c53e9658decadd/SonarSnyk/image%20(1).png)
