@@ -133,4 +133,11 @@ The results of the SonarQube Scan
 # Setting up Snyk
 In docker go to
 - Extensions -> manage ->  then search for Snyk and install
+- Then navigate to images and run the image
+-   you can then see the vulnerabiltiies found for the container by snyk
 ![snyk docker](https://github.com/khadijahW/Flash028/blob/6e0813e51c1e8778958461fc67dad14687ed9f56/SonarSnyk/imasnyk/snyk%20docker)
+
+
+
+
+![snyk critical](https://github.com/khadijahW/Flash028/blob/25d94a293353399e3aadc03c9305204515ae1d0d/SonarSnyk/snyk%20critical)
