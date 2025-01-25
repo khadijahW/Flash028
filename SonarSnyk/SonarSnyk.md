@@ -72,7 +72,7 @@ deselect active for Webhook
 for permissions pull request is required to be write
 Then install the application to all repositiories
 ```
-![image.png]
+![image.png](https://github.com/khadijahW/Flash028/blob/5c3b9b76a5ae4b61f5cc08a68dad50d75f16a877/SonarSnyk/image%20(3).png)
 
 Then in sonarqube click account 
 
