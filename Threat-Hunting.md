@@ -74,7 +74,6 @@ DeviceFileEvents
 
 ## Created By:
 - **Author Name**: khadijah Watkins 
-- **Author Contact**: https://www.linkedin.com/in/joshmadakor/
 - **Date**: March 4, 2025
 
 ## Validated By:
