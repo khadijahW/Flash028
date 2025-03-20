@@ -45,4 +45,28 @@ Global session policies control how users interact with Okta across devices and 
 Authentication policies determine how users authenticate to Okta. To set up authentication policy rules:
 1. Navigate to **Security** > **Authentication Policies**.
 2. Create a new policy or edit an existing one.
-3. Configure rules for factors like password complexity, multi-factor authentication (MFA
+3. Configure rules for factors like password complexity, multi-factor authentication (MFA), and sign-on attempts.
+4. Save and apply the policy.
+
+---
+
+## Attribute Mapping and Offboarding
+Attribute mapping ensures that user attributes are correctly passed between systems. Offboarding ensures that users are deprovisioned when they leave the organization.
+1. Go to **Applications** > **Your Org2Org Application** > **Sign-On** tab.
+2. Configure attribute mappings to match your organization's requirements.
+3. For offboarding, set up a deprovisioning policy in the **Provisioning** tab to automatically deactivate users when they leave.
+
+---
+
+## Account Creation Steps
+Refer to the [Account Creation](#account-creation) section above for detailed steps.
+
+---
+
+## Org2Org
+Refer to the [Configuring SAML 2.0 for Okta Org2Org Application](#configuring-saml-20-for-okta-org2org-application) section above for detailed steps.
+
+---
+
+## Global Session Policy Rules
+Refer to the [Setting Up Global Session Policy Rules](#setting-up-global-session-policy-rules) section above for detailed steps.
