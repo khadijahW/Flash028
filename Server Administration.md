@@ -17,8 +17,8 @@
   - got to policies -> adminstrative templates -> windows component -> windows update 
   - Specify Intranet Mcirosoft update service ( to allow for clients to reach out to the WSUS services)
  
-  - Configure automatic updates
-  - 
+ once the gpo is applied to the domain or ou
+ - run gpupdate so it gets applied to the entire domain
 
 **Network Setup:**  
 | Component        | IP Address | Role |
