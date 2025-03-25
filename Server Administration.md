@@ -10,7 +10,7 @@
 
 ---
 
-## **2. Lab Environment**
+## LAB 2: Setting Up WSUS
 - Setting up WSUS
 - create a GPO for WSUS
   -right click the gpo
@@ -20,6 +20,9 @@
  once the gpo is applied to the domain or ou
  - run gpupdate so it gets applied to the entire domain
 
-**Network Setup:**  
-| Component        | IP Address | Role |
-|
+
+##LAB 3: Recovering a Deleted Active Directory Opject 
+- Open Active Directory Administrative Center (ADAC).
+  - Enabling of Recycle Bin can be found on the righ pane 
+- Navigate to the Deleted Objects container in the left pane.
+- Right-click the object you want to restore and select Restore.
