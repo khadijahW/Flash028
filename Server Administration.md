@@ -11,13 +11,14 @@
 ---
 
 ## **2. Lab Environment**
-**Hardware/Software Requirements:**  
-- OS: [Windows Server 2016/2019/2022, Linux, etc.]
-- RAM: [Specify]
-- CPU: [Specify]
-- Storage: [Specify]
-- Virtualization: [VMware, Hyper-V, etc.]
-- Networking: [Details on VLANs, Load Balancers, Firewall, etc.]
+- Setting up WSUS
+- create a GPO for WSUS
+  -right click the gpo
+  - got to policies -> adminstrative templates -> windows component -> windows update 
+  - Specify Intranet Mcirosoft update service ( to allow for clients to reach out to the WSUS services)
+ 
+  - Configure automatic updates
+  - 
 
 **Network Setup:**  
 | Component        | IP Address | Role |
