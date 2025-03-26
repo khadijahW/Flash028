@@ -12,6 +12,7 @@ Activity Summary
 
 
 # LOGON EVENTS
+
 Query Used
 ```
 DeviceInfo
@@ -35,7 +36,6 @@ Findings: Device had 308 failed logon attempts indicateing evidence of brute for
 
 
 # NETWORK ACTIVITY
-
 
 Query Used
 ```
@@ -70,7 +70,7 @@ DeviceNetworkEvents
 Findings: Total count of 184782
 - the device attempted to connect to various ip addresses that 184782 times.
 
-#FILE EVENTS
+# FILE EVENTS
 
 Query Used
 ```
