@@ -17,7 +17,6 @@ Activity Summary
 - Date: 3/18/2025 6:40:40 AM
 - Description: External reports of Brute Force traffic from you resource where recieved
 - Reported Source: 20.81.228.191
-<br> </br>
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ${{\color{Goldenrod}\large{\textsf{Device Info\ }}}}\$
 ```
@@ -29,7 +28,6 @@ ${{\color{Red}\large{\textsf{Findings:\ }}}}\$
 
 ${{\color{LightSkyBlue}\large{\textsf{MITRE ATTACK References:\ }}}}\$
 - T1592:Gathering Victim Host information
-<br></br>
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ${{\color{Goldenrod}\large{\textsf{Device Logon Events\ }}}}\$
 ```
@@ -75,7 +73,6 @@ DeviceNetworkEvents
 ${{\color{Red}\large{\textsf{Findings:\ }}}}\$: 
 - Total count of 184782
 - the device attempted to connect to various ip addresses that 184782 times.
-<br> </br>
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ${{\color{Goldenrod}\large{\textsf{Device File Events\ }}}}\$
 ```
@@ -325,9 +322,7 @@ ${{\color{GoldenRod}\huge{\textsf{Summary Findings:\ }}}}\$
 - Security Tool Tampering: Attackers attempted to disable Nessus and remove audit trails to maintain persistence and avoid detection (MITRE T1089, T1070).
 - SSH Key Manipulation: Potential SSH persistence through modification of authorized_keys (MITRE T1098).
 - Privilege Escalation & Defense Impairment: System limits and logging policies were altered to enable long-term control and higher resource access (MITRE T1548, T1562).
-
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
 ${{\color{GoldenRod}\huge{\textsf{Recommended Actions:\ }}}}\$
 
 - Isolate Affected Assets: Immediately quarantine sakel-lunix-2.p2zfvso05mlezjev3ck4vqd3kd.cx.internal.cloudapp.net and any related systems.
