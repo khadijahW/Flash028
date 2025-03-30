@@ -18,6 +18,7 @@ Activity Summary
 - Description: External reports of Brute Force traffic from you resource where recieved
 - Reported Source: 20.81.228.191
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+![Cloud Honeynet / SOC](https://github.com/Flash028/Flash028/blob/6f356847b2ef7311d11ee75afdc86f29a89134ee/BUILDING%20A%20SOC/SOC.PNG)
 ${{\color{Goldenrod}\large{\textsf{Device Info\ }}}}\$
 ```
 DeviceInfo
