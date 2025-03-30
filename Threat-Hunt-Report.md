@@ -125,7 +125,7 @@ ${{\color{LightSkyBlue}\large{\textsf{MITRE ATTACK References:\ }}}}\$
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ${{\color{Goldenrod}\large{\textsf{Device Process Events\}}}}\$
 
-![Brute Force](https://github.com/khadijahW/Flash028/blob/b971af3b32027a25815eb85b1137847f6d48a19e/VM%20threat%20%20(1).png)
+![Query](https://github.com/khadijahW/Flash028/blob/a84d03ed8ed0696c89702957d620b2e3c2299da4/Query.png)
 ${{\color{Red}\large{\textsf{Findings:\ }}}}\$
 - This detected execution of risky commands such as (wget,curl,chmod,etc)
 - This query aslo flags processes operating in temporary directories
