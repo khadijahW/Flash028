@@ -125,15 +125,7 @@ ${{\color{LightSkyBlue}\large{\textsf{MITRE ATTACK References:\ }}}}\$
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ${{\color{Goldenrod}\large{\textsf{Device Process Events\}}}}\$
 
-${{\color{Greenyellow}\small{\textsf{Detecting Suspicious Process Execution\}}}}\$
-```
-DeviceProcessEvents
-| where Timestamp > ago(7d) 
-| where ProcessCommandLine has_any ("wget", "curl", "chmod", "pkill", "rm", "killall", "chattr", "ulimit")
-| where ProcessCommandLine has_any ("85.31.47.99", "dinpasiune.com", "/var/tmp/", "/dev/shm/", "/tmp/")
-| project Timestamp, DeviceName, InitiatingProcessAccountName, FileName, ProcessCommandLine
-| order by Timestamp desc
-```
+![Brute Force](https://github.com/khadijahW/Flash028/blob/b971af3b32027a25815eb85b1137847f6d48a19e/VM%20threat%20%20(1).png)
 ${{\color{Red}\large{\textsf{Findings:\ }}}}\$
 - This detected execution of risky commands such as (wget,curl,chmod,etc)
 - This query aslo flags processes operating in temporary directories
