@@ -1,9 +1,9 @@
 $${{\color{Goldenrod}\Huge{\textsf{  Threat \ Hunting \ Report\ \}}}}\$$
 
 
-$${{\color{Goldenrod}\large{\textsf{Abstract\ }}}}\$$
+$${{\color{Goldenrod}\large{\textsf{Executive Summary\ }}}}\$$
 
-This report details a proactive threat hunt initiated after receiving an alert from Microsoft regarding brute-force login attempts targeting enterprise accounts. The investigation focuses on identifying Indicators of Compromise (IOCs) associated with unauthorized authentication attempts, potential credential stuffing, and subsequent adversarial activities aimed at covering tracks.
+Between March 18-20, 2025, a Linux VM hosted in Azure was compromised via brute force attacks originating from 20.81.228.191. Attackers deployed cryptomining malware and evaded detection using stealthy scripts, obfuscation, and log deletion. Multiple MITRE TTPs were observed, and immediate remediation actions are required to prevent re-infection and lateral spread.
 
 The MITRE ATT&CK framework is used to map observed techniques, including:
 - T1110 - Brute Force (Initial Access) – Repeated authentication attempts to compromise valid credentials.
