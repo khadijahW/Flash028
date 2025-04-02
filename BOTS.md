@@ -1,7 +1,6 @@
-<p align="center">
-   
-   ![image](https://github.com/user-attachments/assets/b00ad927-82bd-47ca-9ebd-7fb93b6911fe)
-</p>
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/b00ad927-82bd-47ca-9ebd-7fb93b6911fe" alt="Splunk Boss of the SOC">
+</div>
 
 1. Executive Summary <br>
 No tricks here, just good old network sleuthing! This scenario teaches you how to use Corelight’s insight in Splunk to track down the attack chain of a Trickbot infection. You’ll pivot from Suricata alerts to Zeek evidence, finding indicators of C2 beaconing, lateral movement, and data exfiltration along the way. Plus, you’ll see how valuable our HTTP, DNS, SSL, and x509 logs (and more) are for common incident response and threat hunting tasks.
