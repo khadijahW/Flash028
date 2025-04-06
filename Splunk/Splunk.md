@@ -41,4 +41,12 @@ This can be done in gpedit.msc
   - Turn on Module Logging : Enabled
   - Turn on PowerShell Script Block Logging : Enabled
 
-
+### 🔐 Step 4: Installing Atomic Red Team
+```
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+```
+- This command is to use TLS 1.2
+```
+IEX (IWR 'https://raw.githubusercontent.com/redcanaryco/invoke-atomicredteam/master/install-atomicredteam.ps1' -UseBasicParsing);
+Install-AtomicRedTeam
+```
