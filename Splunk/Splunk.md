@@ -108,6 +108,7 @@ Save this as a report:
 ### 🔐 Step 8: Mapping Attacks 
 
 - Create a mitre attack csv file
+  
 | EventID | MITRE Technique | Description                             |
 |---------|------------------|-----------------------------------------|
 | 4720    | T1136            | Account Created                         |
