@@ -39,4 +39,18 @@ The system must be configured to audit Account Management - User Account Managem
   
 # PowerShell Remediation
 AuditPol /set /subcategory:"User Account Management" /failure:enable
+---
 
+## WN10-AU-000500
+The Application event log size must be configured to 32768 KB or greater.
+
+- **Severity:** High
+- **Description:**The Application event log size must be configured to 32768 KB or greater.
+- Solution:If the system is configured to send audit records directly to an audit server, this is NA. This must be documented with the ISSO. Configure the policy value for Computer Configuration >> Administrative Templates >> Windows Components >> Event Log Service >> Application >> 'Specify the maximum log file size (KB)' to 'Enabled' with a 'Maximum Log Size (KB)' of '32768' or greater.
+- **Fix Text**
+1.Configure the policy value for Computer Configuration
+  Administrative Templates Windows Components >> Event Log Service >> Application >> 'Specify the maximum log file size (KB)' to 'Enabled' with a 'Maximum Log Size (KB)' of '32768' or greater.
+  
+# PowerShell Remediation
+AuditPol /set /subcategory:"User Account Management" /failure:enable
+---
