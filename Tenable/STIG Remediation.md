@@ -8,8 +8,11 @@ This repository documents remediations for STIG (Security Technical Implementati
 
 ## Table of Contents
 
-- [✅ Systems Covered](#systems-covered)
-- [🔒 WN10-AU-000035](#wn10-au-000035)
+- [Systems Covered](#systems-covered)
+- [WN10-AU-000035](#wn10-au-000035)
+- [WN10-AU-000500](#wn10-au-000500)
+- [WN10-CC-000005](#wn10-au-000005)
+- 
 ---
 
 ## Systems Covered
