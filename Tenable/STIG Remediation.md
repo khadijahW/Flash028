@@ -8,8 +8,8 @@ This repository documents remediations for STIG (Security Technical Implementati
 
 ## Table of Contents
 
-- [Systems Covered](#-systems-covered)
-- [WN10-AU-000035 ](#wn10-au-000035 )
+- [✅ Systems Covered](#systems-covered)
+- [🔒 WN10-AU-000035](#wn10-au-000035)
 ---
 
 ## Systems Covered
@@ -21,7 +21,8 @@ This repository documents remediations for STIG (Security Technical Implementati
 
 
 
-### WN10-AU-000035 - The system must be configured to audit Account Management - User Account Management failures.
+## WN10-AU-000035 
+The system must be configured to audit Account Management - User Account Management failures.
 
 - **Severity:** High
 - **Description:** The system must be configured to audit Account Management - User Account Management failures.
@@ -36,7 +37,6 @@ This repository documents remediations for STIG (Security Technical Implementati
   Check Configure the following audit events > Failure
   Click Apply and OK
   
-- **Remediation (Scripted):**
-# PowerShell Example
+# PowerShell Remediation
 AuditPol /set /subcategory:"User Account Management" /failure:enable
 
