@@ -55,7 +55,7 @@ The Application event log size must be configured to 32768 KB or greater.
 3. Event Log Service >> Application
 4. 'Specify the maximum log file size (KB)' to 'Enabled' with a 'Maximum Log Size (KB)' of '32768' or greater.
   
-# PowerShell Remediation
+- PowerShell Remediation
 ```
 New-ItemProperty -Path "HKLM:\Software\Policies\Microsoft\Windows\EventLog\Application" `
   -Name "MaxSize" -PropertyType DWord -Value 32768 -Force
@@ -80,7 +80,7 @@ Camera access from the lock screen must be disabled.
 1. If the device does not have a camera, this is NA. Configure the policy value for
 2. Computer Configuration >> Administrative Templates >> Control Panel >> Personalization >> 'Prevent enabling lock screen camera' to 'Enabled'
 
-# PowerShell Remediation
+- PowerShell Remediation
 
 ```powershell
 New-ItemProperty -Path "HKLM:\Software\Policies\Microsoft\Windows\Personalization" `
