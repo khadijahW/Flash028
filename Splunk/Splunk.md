@@ -1,8 +1,7 @@
 # ⚙️ Splunk + Atomic Red Team Lab Setup
 
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/dc4a9264-efd2-490d-bc3e-812a8152988c" width="400px" />
-</p>
+![image](https://github.com/user-attachments/assets/d6ac83ed-98cd-4072-ab0f-7e3a9a56b65b)
+
 
 This guide walks you through setting up a lab environment using **Splunk**, **Sysmon**, and **Atomic Red Team** for detection engineering, MITRE ATT&CK mapping, and dashboarding.
 
