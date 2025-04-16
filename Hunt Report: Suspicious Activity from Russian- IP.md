@@ -41,4 +41,31 @@ DeviceNetworkEvents
 ```
 - There were a total of 287 Inbound Connection Attempts made from this IP address but only 5 demonstated successful logon attempts.
 
+  I decided to take a llok at each vm that displayed successful logon attempts for events.
+ ```
+  let attack_time=datetime(2025-04-12T13:57:36Z);
+  DeviceEvents
+  | where DeviceName == "vm-final-lab-je"
+  | where Timestamp > attack_time
+```
+- This query looks for ay events on the device vm-final-lab-je that may have occured after the initial indicated attack time. Observing the results of this query, the action types displayed include DpapiAccessed and NamedPiped Event.
+
+## What this could mean
+- DpapiAccessed 
+  - credential decryption
+  - Cookie/session/token extraction
+- Named Piped Event; Exploted by attacted for 
+  - Remote code execution
+  - Command and Control
+
+I then looked for all Dpapi events for all devices. However only one device came up vm-final-lab-cy. The initiating process filename displayed gc_worker.exe.
+The reason why this event is suspicious is due to execution with multiple compliance flags as well as being ran dozens of time from 10:50pm and 12:58am.
+This could be and attacker trying to :
+- enumerate security settings
+- prepare the system for persistence
+
+After these events are svchost.exe,smartscreen.exe, and lass.exe. While these could be legit it is after a suspicious loging and guest config spamming.
+- lsass.exe is a target for crtedential harvesting
+- svchost.exe may be used for DLL of hiding payloads
+
 
