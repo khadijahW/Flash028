@@ -3,7 +3,7 @@ $${{\color{Goldenrod}\Huge{\textsf{  Threat \ Hunting \ Report\ \}}}}\$$
 
 $${{\color{Goldenrod}\large{\textsf{Executive Summary\ }}}}\$$
 
-Between March 18-20, 2025, a Linux VM hosted in Azure was compromised via brute force attacks originating from 20.81.228.191. Attackers deployed cryptomining malware and evaded detection using stealthy scripts, obfuscation, and log deletion. Multiple MITRE TTPs were observed, and immediate remediation actions are required to prevent re-infection and lateral spread.
+Between March 18-20, 2025, a Linux virtual machine in Microsoft Azure was compromised through brute-force attacks. The threat actor deployed cryptomining malware, tampered with system logs, and attempted to maintain persistence through SSH key manipulation and scheduled tasks. The compromise included advanced evasion tactics and aligns with multiple MITRE ATT&CK techniques. This report outlines the timeline, TTPs, findings, and required remediation steps.
 
 The MITRE ATT&CK framework is used to map observed techniques, including:
 - T1110 - Brute Force (Initial Access) – Repeated authentication attempts to compromise valid credentials.
@@ -97,8 +97,7 @@ DeviceFileEvents
 | summarize count()by ActionType
 ```
 ${{\color{Red}\large{\textsf{Findings:\ }}}}\$
-- There was a total of 7025 deleted files
-
+- Analysis revealed that 7,025 files were deleted, which could indicate potential malicious behavior, automated script execution, or intentional cleanup activities by threat actors.
 ${{\color{LightSkyBlue}\large{\textsf{MITRE ATTACK References:\ }}}}\$
 - T1565: Data Manipulation
 - Detection: File Creation, File Deletion, File Modification
@@ -115,8 +114,10 @@ Output
 - /bin/bash /var/tmp/.update-logs/./.b
 
 ${{\color{Red}\large{\textsf{Findings:\ }}}}\$
-- this command .update-logs is an attempt to remain stealth
-- dev/null - is used to prevent logging
+- The use of the .update-logs command is a stealth technique commonly employed by threat actors or malicious scripts to manipulate or mask logging activity. This command may appear benign but is often used to disguise malicious behavior or log tampering.
+- Additionally, redirecting output to /dev/null serves to:
+  - Supress standard output and error messages making the activity less detectable to monitoring tools
+  - Prevent log files from capturing execution results and minimizing traceability
 <br> </br>
 
 ${{\color{LightSkyBlue}\large{\textsf{MITRE ATTACK References:\ }}}}\$
