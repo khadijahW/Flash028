@@ -92,3 +92,9 @@ This confirms credential harvesting or surveillance behavior linked to the fake 
 Hints:
 1. ."a rather efficient way to completing a complex process" 
 2. News
+
+This flag gave me a bit of trouble as well as other community members. I was instructed to look and see what files are created by the file I discovered in flag #3. My query used to discover the flag is provided below:
+
+```
+
+Answer:systemreport.lnk
