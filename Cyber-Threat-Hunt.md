@@ -93,8 +93,11 @@ Hints:
 1. ."a rather efficient way to completing a complex process" 
 2. News
 
-This flag gave me a bit of trouble as well as other community members. I was instructed to look and see what files are created by the file I discovered in flag #3. My query used to discover the flag is provided below:
+This flag gave me a bit of trouble as well as other community members. I was instructed to look and see what files are created by the file I discovered in flag #3. Doing so, led me to a file called ThreatMetrics. Which was the incorrect answer for the flag. I then decided to shift my focus to see what files where within the folder path associated wit the fake antivirus. My query used to discover the flag is provided below:
 
 ```
-
+DeviceFileEvents
+| where DeviceName contains "anthony-001"
+| where FolderPath contains @"C\Users\4nth0ny!\AppData\Roaming"
+```
 Answer:systemreport.lnk
