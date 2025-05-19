@@ -173,3 +173,25 @@ Provide the kill chain
 - This flag did not necessarily require a query as it was a bit more simplier based on information form the previous flags.
 
 Answer: BitSentinelCore.exe -> cmd.exe -> schtasks.exe
+
+---
+Flag 8 – Timestamp Correlation
+Objective:
+Correlate all observed behaviors to a single initiating event
+
+What to Hunt:
+Compare timestamps from the initial execution to file creation, registry modification, and task scheduling.
+
+Thought:
+Builds a forensic timeline that strengthens cause-and-effect analysis, confirming that all actions originated from the execution of the fake antivirus program. 
+Provide the timestamp of the leading event that's causing all these mess
+
+-This flag can simply be found by reference backto the fake antvirus found in Flag #1.
+```
+DeviceFileEvents
+| where DeviceName == "anthony-001"
+| where (FileName startswith "A" or FileName startswith "B" or FileName startswith "C") 
+    and FileName endswith ".exe"
+| project Timestamp
+```
+Answers: 2025-05-07T02:00:36.794406Z
