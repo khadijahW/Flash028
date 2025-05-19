@@ -1,4 +1,8 @@
-## Scenario:
+$${{\color{RoyalBlue}\Huge{\textsf{The\ Great\ Admin\ Heist}}}}\$$
+
+---
+${{\color{Teal}\Huge{\textsf{Scenario}}}}\$
+
 At Acme Corp, the eccentric yet brilliant IT admin, Bubba Rockerfeatherman III, isn’t just patching servers and resetting passwords — he’s the secret guardian of trillions in digital assets. Hidden deep within encrypted vaults lie private keys, sensitive data, and intellectual gold... all protected by his privileged account.
 
 But the shadows have stirred.
@@ -6,22 +10,25 @@ A covert APT group known only as The Phantom Hackers 👤 has set their sights o
 
 The breach has already begun.
 Using phishing, credential theft, and evasive tactics, the attackers have infiltrated Acme’s network. Bubba doesn’t even know he's compromised.
-## Mission 
+
+${{\color{Teal}\Huge{\textsf{Mision}}}}\$
+
 Hunt through Microsoft Defender for Endpoint (MDE) telemetry, analyze signals, query using KQL, and follow the breadcrumbs before the keys to Bubba’s empire vanish forever.
 
-Known Information:
-DeviceName: anthony-001
-RemoteSessionIP: 192.168.0.110
+- Known Information:
+- DeviceName: anthony-001
+- RemoteSessionIP: 192.168.0.110
 
-## Flag 1: Identify the Fake Antivirus Program Name
+${{\color{Teal}\Huge{\textsf{Flag 1: Identify the Fake Antivirus Program Name}}}}\$ <br>
+
 Objective:
-Determine the name of the suspicious or deceptive antivirus program that initiated the security incident.
+- Determine the name of the suspicious or deceptive antivirus program that initiated the security incident.
 
 What to Hunt:
-Look for the name of the suspicious file or binary that resembles an antivirus but is responsible for the malicious activity.
+- Look for the name of the suspicious file or binary that resembles an antivirus but is responsible for the malicious activity.
 
 Thought:
-This step is critical for attribution. Identifying the root artifact allows analysts to formulate a hypothesis and determine the origin of the malicious chain of events.
+- This step is critical for attribution. Identifying the root artifact allows analysts to formulate a hypothesis and determine the origin of the malicious chain of events.
 
 Hints:
 1. Platform we use in our company
@@ -39,16 +46,16 @@ From the results returned I concluded that the only possible correct answer base
 - Answer: BitSentinelCore.exe
 
 ---
+${{\color{Teal}\Huge{\textsf{Flag 2: Malicious File Written Somewhere}}}}\$<br>
 
-## Flag 2: Malicious File Written Somewhere
 Objective:
-Confirm that the fake antivirus binary was written to the disk on the host system.
+- Confirm that the fake antivirus binary was written to the disk on the host system.
 
 What to Hunt:
-Identify the one responsible for dropping the malicious file into the disk.
+- Identify the one responsible for dropping the malicious file into the disk.
 
 Thought:
-This validates the delivery mechanism of the dropper and supports behavioral indicators of compromise, particularly in directories often used by malware.
+- This validates the delivery mechanism of the dropper and supports behavioral indicators of compromise, particularly in directories often used by malware.
 
 Hints:
 1. Legit software
@@ -63,15 +70,16 @@ DeviceFileEvents
 Answer: csc.exe
 
 ---
-## Flag 3: Execution of the Program
+${{\color{Teal}\Huge{\textsf{Flag 3: Execution of the Program}}}}\$
+
 Objective:
-Verify whether the dropped malicious file was manually executed by the user or attacker.
+- Verify whether the dropped malicious file was manually executed by the user or attacker.
 
 What to Hunt:
-Search for process execution events tied to the suspicious binary.
+- Search for process execution events tied to the suspicious binary.
 
 Thought:
-Execution of the file marks the start of the malicious payloads being triggered, indicating user interaction or attacker initiation.
+- Execution of the file marks the start of the malicious payloads being triggered, indicating user interaction or attacker initiation.
 
 Hint:
 1. Bubba clicked the .exe file himself
@@ -79,21 +87,22 @@ Hint:
 Answer:BitSentinelCore.exe
 
 ---
-Flag 4 – Keylogger Artifact Written
+${{\color{Teal}\Huge{\textsf{Flag 4: Keylogger Artifact Written}}}}\$<br>
+
 Objective:
-Identify whether any artifact was dropped that indicates keylogger behavior.
+- Identify whether any artifact was dropped that indicates keylogger behavior.
 
 What to Hunt:
-Search for any file write events associated with possible keylogging activity.
+- Search for any file write events associated with possible keylogging activity.
 
 Thought:
-This confirms credential harvesting or surveillance behavior linked to the fake antivirus binary.
+- This confirms credential harvesting or surveillance behavior linked to the fake antivirus binary.
 
 Hints:
 1. ."a rather efficient way to completing a complex process" 
 2. News
 
-This flag gave me a bit of trouble as well as other community members. I was instructed to look and see what files are created by the file I discovered in flag #3. Doing so, led me to a file called ThreatMetrics. Which was the incorrect answer for the flag. I then decided to shift my focus to see what files where within the folder path associated wit the fake antivirus. My query used to discover the flag is provided below:
+Side note: This flag gave me a bit of trouble as well as other community members. I was instructed to look and see what files are created by the file I discovered in flag #3. Doing so, led me to a file called ThreatMetrics. Which was the incorrect answer for the flag. I then decided to shift my focus to see what files where within the folder path associated wit the fake antivirus. My query used to discover the flag is provided below:
 
 ```
 DeviceFileEvents
@@ -103,39 +112,41 @@ DeviceFileEvents
 Answer:systemreport.lnk
 
 ---
-Flag 5 – Registry Persistence Entry
+${{\color{Teal}\Huge{\textsf{Flag 5: Registry Persistence Entry}}}}\$<br>
+
 Objective:
-Determine if the malware established persistence via the Windows Registry.
+- Determine if the malware established persistence via the Windows Registry.
 
 What to Hunt:
-Look for registry modifications that enable the malware to auto-run on startup.
+- Look for registry modifications that enable the malware to auto-run on startup.
 
 Thought:
-This flag reveals how the malware achieves persistence across system reboots or logins, helping track long-term infection.
+- This flag reveals how the malware achieves persistence across system reboots or logins, helping track long-term infection.
 
 Hint:
 1. Long answer
 Identify the full Registry Path value
 
-To solve this flag I switched to the DeviceRegistryEvents table. The folloing query used was:
+- To solve this flag I switched to the DeviceRegistryEvents table. The folloing query used was:
 ```
 DeviceRegistryEvents
 | where RegistryValueData has "bitsentinelcore.exe"
 ```
-There was only one field underneath result
+- There was only one field underneath result
 
 Answer: HKEY_CURRENT_USER\S-1-5-21-2009930472-1356288797-1940124928-500\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
 
 ---
-Flag 6 - Daily Scheduled Task Created
+${{\color{Teal}\Huge{\textsf{Flag 6: Daily Scheduled Task Created}}}}\$<br>
+
 Objective:
-Identify the value proves that the attacker intents for long-term access
+- Identify the value proves that the attacker intents for long-term access
 
 What to Hunt:
-Identify name of the associated scheduled task.
+- Identify name of the associated scheduled task.
 
 Thought:
-Without detecting this task, participants might miss that the system stays infected beyond just running the dropper once.
+- Without detecting this task, participants might miss that the system stays infected beyond just running the dropper once.
 
 Hints:
 1. Three
@@ -153,15 +164,17 @@ This query lead. to 3 results in which further inspection of the command line fi
 
 Answer:UpdateHealthTelemetry
 
-Flag 7 – Process Spawn Chain
+---
+${{\color{Teal}\Huge{\textsf{Flag7: Process Spawn Chain}}}}\$<br>
+
 Objective:
-Understand the full chain of process relationships that led to task creation.
+- Understand the full chain of process relationships that led to task creation.
 
 What to Hunt:
-Trace the parent process that led to cmd.exe, and subsequently to schtasks.exe.
+- Trace the parent process that led to cmd.exe, and subsequently to schtasks.exe.
 
 Thought:
-Illustrates how the attacker leveraged process relationships to implement persistence, providing insight into the execution flow.
+- Illustrates how the attacker leveraged process relationships to implement persistence, providing insight into the execution flow.
 
 Format: 
 parent -> child -> grandchild
@@ -175,18 +188,20 @@ Provide the kill chain
 Answer: BitSentinelCore.exe -> cmd.exe -> schtasks.exe
 
 ---
-Flag 8 – Timestamp Correlation
+${{\color{Teal}\Huge{\textsf{Flag 8: Timestamp Correlation}}}}\$<br>
+
 Objective:
-Correlate all observed behaviors to a single initiating event
+- Correlate all observed behaviors to a single initiating event
 
 What to Hunt:
-Compare timestamps from the initial execution to file creation, registry modification, and task scheduling.
+- Compare timestamps from the initial execution to file creation, registry modification, and task scheduling.
 
 Thought:
-Builds a forensic timeline that strengthens cause-and-effect analysis, confirming that all actions originated from the execution of the fake antivirus program. 
+- Builds a forensic timeline that strengthens cause-and-effect analysis, confirming that all actions originated from the execution of the fake antivirus program. 
+
 Provide the timestamp of the leading event that's causing all these mess
 
--This flag can simply be found by reference backto the fake antvirus found in Flag #1.
+- This flag can simply be found by referencing back to the fake antvirus found in Flag #1.
 ```
 DeviceFileEvents
 | where DeviceName == "anthony-001"
