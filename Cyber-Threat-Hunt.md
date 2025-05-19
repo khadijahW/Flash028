@@ -18,6 +18,7 @@ Hunt through Microsoft Defender for Endpoint (MDE) telemetry, analyze signals, q
 - Known Information:
 - DeviceName: anthony-001
 - RemoteSessionIP: 192.168.0.110
+---
 
 ${{\color{Teal}\Huge{\textsf{Flag 1: Identify the Fake Antivirus Program Name}}}}\$ <br>
 
