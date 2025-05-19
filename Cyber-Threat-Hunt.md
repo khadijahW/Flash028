@@ -101,3 +101,75 @@ DeviceFileEvents
 | where FolderPath contains @"C\Users\4nth0ny!\AppData\Roaming"
 ```
 Answer:systemreport.lnk
+
+---
+Flag 5 – Registry Persistence Entry
+Objective:
+Determine if the malware established persistence via the Windows Registry.
+
+What to Hunt:
+Look for registry modifications that enable the malware to auto-run on startup.
+
+Thought:
+This flag reveals how the malware achieves persistence across system reboots or logins, helping track long-term infection.
+
+Hint:
+1. Long answer
+Identify the full Registry Path value
+
+To solve this flag I switched to the DeviceRegistryEvents table. The folloing query used was:
+```
+DeviceRegistryEvents
+| where RegistryValueData has "bitsentinelcore.exe"
+```
+There was only one field underneath result
+
+Answer: HKEY_CURRENT_USER\S-1-5-21-2009930472-1356288797-1940124928-500\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
+
+---
+Flag 6 - Daily Scheduled Task Created
+Objective:
+Identify the value proves that the attacker intents for long-term access
+
+What to Hunt:
+Identify name of the associated scheduled task.
+
+Thought:
+Without detecting this task, participants might miss that the system stays infected beyond just running the dropper once.
+
+Hints:
+1. Three
+2. Fitness
+What is the name of the created scheduled task?
+
+For this flag, I utilzed the Process Events Table as well as the known fake antivirus.
+```
+DeviceProcesEvents
+| where ProcessCommandLine has "BitsentinelCore.exe"
+| where DeviceName contains "anthony-001"
+| where FileName has "schtasks.exe"
+```
+This query lead. to 3 results in which further inspection of the command line field would lead to the nae of the scheduled task.
+
+Answer:UpdateHealthTelemetry
+
+Flag 7 – Process Spawn Chain
+Objective:
+Understand the full chain of process relationships that led to task creation.
+
+What to Hunt:
+Trace the parent process that led to cmd.exe, and subsequently to schtasks.exe.
+
+Thought:
+Illustrates how the attacker leveraged process relationships to implement persistence, providing insight into the execution flow.
+
+Format: 
+parent -> child -> grandchild
+
+Hint: (how the answer should look)
+bubba.exe -> newworldorder.exe -> illuminate.exe
+Provide the kill chain
+
+- This flag did not necessarily require a query as it was a bit more simplier based on information form the previous flags.
+
+Answer: BitSentinelCore.exe -> cmd.exe -> schtasks.exe
