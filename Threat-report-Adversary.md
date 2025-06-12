@@ -6,7 +6,7 @@ ${{\color{Blue}\huge{\textsf{Deep Access:The Adversary\ }}}}\$
 
 ---
 Scenario
-FOr weeks, multiple partner organizations across SOutheast Asia and Eastern Europe detected odd outbound activity to obscure cloud endpoints.Initially dismissed as harmless automation,the anomalies began aligning.
+For weeks, multiple partner organizations across SOutheast Asia and Eastern Europe detected odd outbound activity to obscure cloud endpoints.Initially dismissed as harmless automation,the anomalies began aligning.
  
 
 ${{\color{Blue}\large{\textsf{Key Indicators of Compromise (IOCs)\ }}}}\$
